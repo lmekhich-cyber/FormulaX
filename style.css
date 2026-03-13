@@ -1,0 +1,986 @@
+/* ═══════════════════════════════════════════════════════
+   FormulaX — L'Atlas des Sciences
+   Design: Dark Academia meets Modern Tech
+   ═══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;600&family=Nunito:wght@300;400;600&display=swap');
+
+/* ─── CSS Variables ─── */
+:root {
+  --bg: #0d0f1a;
+  --bg2: #12152a;
+  --bg3: #1a1f35;
+  --bg4: #1f2540;
+  --surface: #252b45;
+  --surface2: #2d3459;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #e8eaf0;
+  --text-muted: #8b92b8;
+  --text-dim: #5a6189;
+
+  /* Accents */
+  --math: #818cf8;       /* Indigo */
+  --math-light: #c7d2fe;
+  --math-glow: rgba(129,140,248,0.25);
+  --phys: #fb923c;       /* Orange */
+  --phys-light: #fed7aa;
+  --phys-glow: rgba(251,146,60,0.25);
+  --chem: #34d399;       /* Emerald */
+  --chem-light: #a7f3d0;
+  --chem-glow: rgba(52,211,153,0.25);
+  --ex: #f472b6;         /* Pink */
+
+  --font-display: 'DM Serif Display', serif;
+  --font-sans: 'Nunito', sans-serif;
+  --font-head: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-lg: 24px;
+  --shadow: 0 4px 30px rgba(0,0,0,0.5);
+  --shadow-glow-math: 0 0 40px rgba(129,140,248,0.15);
+  --shadow-glow-phys: 0 0 40px rgba(251,146,60,0.15);
+  --shadow-glow-chem: 0 0 40px rgba(52,211,153,0.15);
+}
+
+[data-theme="light"] {
+  --bg: #f5f6ff;
+  --bg2: #eef0ff;
+  --bg3: #e8eaff;
+  --bg4: #dfe2ff;
+  --surface: #ffffff;
+  --surface2: #f0f2ff;
+  --border: rgba(0,0,0,0.07);
+  --border2: rgba(0,0,0,0.12);
+  --text: #1a1f35;
+  --text-muted: #4a5280;
+  --text-dim: #8090c0;
+}
+
+/* ─── Reset & Base ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* MathJax spacing */
+.MathJax { font-size: 1.05em !important; }
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 3px; }
+
+/* ─── Navbar ─── */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  height: 68px;
+  background: rgba(13,15,26,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(245,246,255,0.9);
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--text);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.logo-icon { font-size: 1.4rem; }
+.logo-accent { color: var(--math); }
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.nav-link:hover { background: var(--surface); color: var(--text); }
+.math-link:hover { color: var(--math); background: var(--math-glow); }
+.phys-link:hover { color: var(--phys); background: var(--phys-glow); }
+.chem-link:hover { color: var(--chem); background: var(--chem-glow); }
+.ex-link:hover { color: var(--ex); background: rgba(244,114,182,0.2); }
+
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+  transition: all 0.2s;
+}
+
+.theme-toggle:hover { transform: rotate(20deg); }
+
+/* ─── Hero ─── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 4rem 80px;
+  overflow: hidden;
+  gap: 4rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: float 8s ease-in-out infinite;
+}
+
+.orb1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, var(--math) 0%, transparent 70%);
+  top: -100px; right: 10%;
+  animation-delay: 0s;
+}
+
+.orb2 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, var(--phys) 0%, transparent 70%);
+  bottom: 10%; left: -50px;
+  animation-delay: -3s;
+}
+
+.orb3 {
+  width: 250px; height: 250px;
+  background: radial-gradient(circle, var(--chem) 0%, transparent 70%);
+  top: 40%; right: 35%;
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+
+.hero-formula-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+}
+
+.bg-formula {
+  font-family: var(--font-display);
+  font-size: 52px;
+  fill: var(--text);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-family: var(--font-head);
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title em {
+  font-style: italic;
+  background: linear-gradient(135deg, var(--math), var(--phys), var(--chem));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat { text-align: center; }
+.stat-num {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--math), var(--chem));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.stat-div {
+  width: 1px;
+  height: 40px;
+  background: var(--border2);
+}
+
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--math), #6366f1);
+  color: white;
+  box-shadow: 0 4px 20px rgba(129,140,248,0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(129,140,248,0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border2);
+}
+
+.btn-outline:hover {
+  background: var(--surface);
+  transform: translateY(-2px);
+}
+
+/* Hero visual */
+.hero-visual {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.molecule {
+  width: 300px;
+  height: 300px;
+  animation: spin-slow 20s linear infinite;
+  filter: drop-shadow(0 0 30px rgba(129,140,248,0.3));
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mol-node { animation: pulse-node 3s ease-in-out infinite; }
+.mol-bond { animation: pulse-bond 3s ease-in-out infinite; }
+
+@keyframes pulse-node {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ─── Level Bar ─── */
+.level-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.level-item {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.level-item:hover, .level-item.active {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border2);
+}
+
+.level-arrow { color: var(--text-dim); font-size: 0.9rem; }
+
+/* ─── Subject Sections ─── */
+.subject-section {
+  padding: 5rem 3rem;
+  position: relative;
+}
+
+.math-section { background: var(--bg); }
+.phys-section { background: var(--bg2); }
+.chem-section { background: var(--bg); }
+
+/* Section accent strips */
+.math-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--math), #6366f1, transparent);
+}
+
+.phys-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--phys), #f43f5e, transparent);
+}
+
+.chem-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--chem), #06b6d4, transparent);
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.section-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, var(--math-glow), var(--math));
+  color: white;
+  box-shadow: var(--shadow-glow-math);
+  flex-shrink: 0;
+}
+
+.phys-icon {
+  background: linear-gradient(135deg, var(--phys-glow), var(--phys));
+  box-shadow: var(--shadow-glow-phys);
+}
+
+.chem-icon {
+  background: linear-gradient(135deg, var(--chem-glow), var(--chem));
+  box-shadow: var(--shadow-glow-chem);
+}
+
+.ex-icon {
+  background: linear-gradient(135deg, rgba(244,114,182,0.3), var(--ex));
+  box-shadow: 0 0 40px rgba(244,114,182,0.15);
+}
+
+.const-icon {
+  background: linear-gradient(135deg, rgba(148,163,184,0.3), #94a3b8);
+}
+
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--math);
+  margin-bottom: 0.4rem;
+}
+
+.phys-tag { color: var(--phys) !important; }
+.chem-tag { color: var(--chem) !important; }
+.ex-tag { color: var(--ex) !important; }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.phys-title { }
+.chem-title { }
+.ex-title { }
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* ─── Level Blocks ─── */
+.level-block {
+  margin-bottom: 3rem;
+}
+
+.level-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.2rem;
+  border-radius: 50px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.82rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.badge-green {
+  background: rgba(52,211,153,0.12);
+  border: 1px solid rgba(52,211,153,0.3);
+  color: var(--chem);
+}
+
+.badge-yellow {
+  background: rgba(234,179,8,0.12);
+  border: 1px solid rgba(234,179,8,0.3);
+  color: #eab308;
+}
+
+.badge-orange {
+  background: rgba(251,146,60,0.12);
+  border: 1px solid rgba(251,146,60,0.3);
+  color: var(--phys);
+}
+
+.badge-red {
+  background: rgba(239,68,68,0.12);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: #ef4444;
+}
+
+/* ─── Formula Grid ─── */
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ─── Formula Card ─── */
+.formula-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.formula-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--math), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.math-section .formula-card::before { background: linear-gradient(90deg, transparent, var(--math), transparent); }
+.phys-section .formula-card::before { background: linear-gradient(90deg, transparent, var(--phys), transparent); }
+.chem-section .formula-card::before { background: linear-gradient(90deg, transparent, var(--chem), transparent); }
+
+.formula-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow), var(--shadow-glow-math);
+}
+
+.phys-section .formula-card:hover { box-shadow: var(--shadow), var(--shadow-glow-phys); }
+.chem-section .formula-card:hover { box-shadow: var(--shadow), var(--shadow-glow-chem); }
+
+.formula-card:hover::before { opacity: 1; }
+
+.formula-tag {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  background: var(--math-glow);
+  color: var(--math);
+  border-radius: 50px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.phys-tag-sm {
+  background: var(--phys-glow) !important;
+  color: var(--phys) !important;
+}
+
+.chem-tag-sm {
+  background: var(--chem-glow) !important;
+  color: var(--chem) !important;
+}
+
+.formula-name {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* Formula Display Box */
+.formula-box {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--math);
+}
+
+.phys-box { border-left-color: var(--phys); }
+.chem-box { border-left-color: var(--chem); }
+
+.formula-display {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--math-light);
+  padding: 0.3rem 0;
+  line-height: 1.8;
+}
+
+.phys-box .formula-display { color: var(--phys-light); }
+.chem-box .formula-display { color: var(--chem-light); }
+
+.formula-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ─── Schema / SVG ─── */
+.schema-container {
+  background: var(--bg4);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+.schema-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Example Block ─── */
+.example-block {
+  background: rgba(129,140,248,0.07);
+  border: 1px dashed rgba(129,140,248,0.25);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
+  font-size: 0.875rem;
+}
+
+.phys-section .example-block {
+  background: rgba(251,146,60,0.07);
+  border-color: rgba(251,146,60,0.25);
+}
+
+.chem-section .example-block {
+  background: rgba(52,211,153,0.07);
+  border-color: rgba(52,211,153,0.25);
+}
+
+.example-title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--math);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.phys-section .example-title { color: var(--phys); }
+.chem-section .example-title { color: var(--chem); }
+
+.example-block p { color: var(--text-muted); margin-bottom: 0.3rem; }
+.example-block p:last-child { margin-bottom: 0; }
+.example-block strong { color: var(--text); }
+
+/* ─── Exercises Section ─── */
+.exercises-section {
+  padding: 5rem 3rem;
+  background: var(--bg2);
+  position: relative;
+}
+
+.exercises-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ex), #a855f7, transparent);
+}
+
+.exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ─── Exercise Card ─── */
+.exercise-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.exercise-card:hover {
+  border-color: rgba(244,114,182,0.3);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow), 0 0 30px rgba(244,114,182,0.1);
+}
+
+.ex-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.ex-badge {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 50px;
+}
+
+.ex-subject {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ex-title-card {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.ex-statement {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+}
+
+.solution-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.2rem;
+  background: transparent;
+  border: 1.5px solid rgba(244,114,182,0.4);
+  border-radius: 50px;
+  color: var(--ex);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.04em;
+}
+
+.solution-btn:hover {
+  background: rgba(244,114,182,0.1);
+  border-color: var(--ex);
+  transform: translateY(-1px);
+}
+
+.solution-block {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  animation: slideIn 0.3s ease;
+}
+
+.solution-block.hidden { display: none; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.solution-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--surface2);
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ex);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.solution-answer {
+  margin-top: 0.8rem;
+  padding: 0.7rem 1rem;
+  background: rgba(52,211,153,0.08);
+  border: 1px solid rgba(52,211,153,0.25);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--chem);
+  font-family: var(--font-head);
+  font-weight: 600;
+}
+
+/* ─── Constants Section ─── */
+.constants-section {
+  padding: 5rem 3rem;
+  background: var(--bg3);
+}
+
+.constants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.constant-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.constant-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.constant-symbol {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--math), var(--chem));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.constant-name {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.constant-value {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ─── Footer ─── */
+.footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 3rem;
+}
+
+.footer-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.footer-tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.footer-tag {
+  padding: 0.2rem 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-head);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+/* ─── Utility ─── */
+.hidden { display: none !important; }
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 120px 2rem 60px;
+    text-align: center;
+  }
+  .hero-stats { justify-content: center; }
+  .hero-cta { justify-content: center; }
+  .hero-visual { display: none; }
+  .subject-section, .exercises-section, .constants-section { padding: 3rem 1.5rem; }
+  .formula-grid, .exercises-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .section-header { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.5rem; }
+  .constants-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ─── Print styles ─── */
+@media print {
+  .navbar, .hero-bg, .hero-visual, .theme-toggle, .solution-btn { display: none; }
+  .solution-block { display: block !important; }
+  body { background: white; color: black; }
+  .formula-card, .exercise-card { border: 1px solid #ccc; break-inside: avoid; }
+}
