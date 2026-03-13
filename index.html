@@ -11,83 +11,70 @@
 </head>
 <body>
 
-<!-- Navigation -->
 <nav class="navbar" id="navbar">
-  <div class="nav-logo">
-    <span class="logo-icon">⚗️</span>
-    <span class="logo-text">Formula<span class="logo-accent">X</span></span>
-  </div>
+  <div class="nav-logo"><span class="logo-icon">⚗️</span><span class="logo-text">Formula<span class="logo-accent">X</span></span></div>
   <div class="nav-links">
     <a href="#maths" class="nav-link math-link">Mathématiques</a>
     <a href="#physique" class="nav-link phys-link">Physique</a>
     <a href="#chimie" class="nav-link chem-link">Chimie</a>
     <a href="#exercices" class="nav-link ex-link">Exercices</a>
+    <a href="#constantes" class="nav-link">Constantes</a>
   </div>
   <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
 </nav>
 
-<!-- Hero -->
 <header class="hero">
   <div class="hero-bg">
     <div class="hero-grid"></div>
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
-    <div class="orb orb3"></div>
+    <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
     <svg class="hero-formula-bg" viewBox="0 0 1200 600" aria-hidden="true">
       <text x="80" y="120" class="bg-formula">E = mc²</text>
       <text x="600" y="80" class="bg-formula">∫f(x)dx</text>
       <text x="950" y="200" class="bg-formula">pH = -log[H⁺]</text>
-      <text x="150" y="400" class="bg-formula">a² + b² = c²</text>
+      <text x="150" y="400" class="bg-formula">a²+b²=c²</text>
       <text x="700" y="450" class="bg-formula">F = ma</text>
       <text x="300" y="540" class="bg-formula">PV = nRT</text>
-      <text x="870" y="520" class="bg-formula">Δ = b²−4ac</text>
+      <text x="870" y="520" class="bg-formula">uₙ = u₁·qⁿ⁻¹</text>
     </svg>
   </div>
   <div class="hero-content">
-    <div class="hero-badge">📚 Atlas Scientifique Complet</div>
+    <div class="hero-badge">📚 Atlas Scientifique Complet — 300+ Formules</div>
     <h1 class="hero-title">L'Atlas des<br><em>Sciences</em></h1>
-    <p class="hero-sub">Toutes les formules essentielles en Mathématiques, Physique et Chimie — du collège aux études supérieures. Des exemples concrets, des schémas et des exercices pour apprendre à tout âge.</p>
+    <p class="hero-sub">Toutes les formules essentielles en Mathématiques, Physique et Chimie — du primaire aux études supérieures. Suites, probabilités, optique, chimie organique et bien plus.</p>
     <div class="hero-stats">
-      <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Formules</span></div>
+      <div class="stat"><span class="stat-num">300+</span><span class="stat-label">Formules</span></div>
       <div class="stat-div"></div>
       <div class="stat"><span class="stat-num">3</span><span class="stat-label">Matières</span></div>
       <div class="stat-div"></div>
-      <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Apprentissage</span></div>
+      <div class="stat"><span class="stat-num">4</span><span class="stat-label">Niveaux</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Exercices</span></div>
     </div>
     <div class="hero-cta">
-      <a href="#maths" class="btn btn-primary">Explorer les formules</a>
-      <a href="#exercices" class="btn btn-outline">Faire des exercices</a>
+      <a href="#maths" class="btn btn-primary">Explorer</a>
+      <a href="#exercices" class="btn btn-outline">S'exercer</a>
     </div>
   </div>
   <div class="hero-visual">
     <svg class="molecule" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <radialGradient id="nodeGrad1" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#6ee7f7"/>
-          <stop offset="100%" stop-color="#3b82f6"/>
-        </radialGradient>
-        <radialGradient id="nodeGrad2" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#f9a8d4"/>
-          <stop offset="100%" stop-color="#ec4899"/>
-        </radialGradient>
-        <radialGradient id="nodeGrad3" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#bbf7d0"/>
-          <stop offset="100%" stop-color="#22c55e"/>
-        </radialGradient>
+        <radialGradient id="ng1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#6ee7f7"/><stop offset="100%" stop-color="#3b82f6"/></radialGradient>
+        <radialGradient id="ng2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f9a8d4"/><stop offset="100%" stop-color="#ec4899"/></radialGradient>
+        <radialGradient id="ng3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#bbf7d0"/><stop offset="100%" stop-color="#22c55e"/></radialGradient>
       </defs>
-      <line x1="150" y1="150" x2="80" y2="80" stroke="rgba(255,255,255,0.3)" stroke-width="3" class="mol-bond"/>
-      <line x1="150" y1="150" x2="220" y2="80" stroke="rgba(255,255,255,0.3)" stroke-width="3" class="mol-bond"/>
-      <line x1="150" y1="150" x2="80" y2="220" stroke="rgba(255,255,255,0.3)" stroke-width="3" class="mol-bond"/>
-      <line x1="150" y1="150" x2="220" y2="220" stroke="rgba(255,255,255,0.3)" stroke-width="3" class="mol-bond"/>
-      <line x1="150" y1="150" x2="150" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="2" class="mol-bond"/>
-      <line x1="150" y1="150" x2="250" y2="150" stroke="rgba(255,255,255,0.2)" stroke-width="2" class="mol-bond"/>
-      <circle cx="150" cy="150" r="35" fill="url(#nodeGrad1)" class="mol-node"/>
-      <circle cx="80" cy="80" r="22" fill="url(#nodeGrad2)" class="mol-node"/>
-      <circle cx="220" cy="80" r="18" fill="url(#nodeGrad3)" class="mol-node"/>
-      <circle cx="80" cy="220" r="20" fill="url(#nodeGrad3)" class="mol-node"/>
-      <circle cx="220" cy="220" r="16" fill="url(#nodeGrad2)" class="mol-node"/>
-      <circle cx="150" cy="50" r="14" fill="url(#nodeGrad1)" class="mol-node"/>
-      <circle cx="250" cy="150" r="14" fill="url(#nodeGrad2)" class="mol-node"/>
+      <line x1="150" y1="150" x2="80" y2="80"   stroke="rgba(255,255,255,0.25)" stroke-width="2.5"/>
+      <line x1="150" y1="150" x2="220" y2="80"  stroke="rgba(255,255,255,0.25)" stroke-width="2.5"/>
+      <line x1="150" y1="150" x2="80" y2="220"  stroke="rgba(255,255,255,0.25)" stroke-width="2.5"/>
+      <line x1="150" y1="150" x2="220" y2="220" stroke="rgba(255,255,255,0.25)" stroke-width="2.5"/>
+      <line x1="150" y1="150" x2="150" y2="50"  stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+      <line x1="150" y1="150" x2="250" y2="150" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+      <circle cx="150" cy="150" r="35" fill="url(#ng1)"/>
+      <circle cx="80" cy="80" r="22" fill="url(#ng2)"/>
+      <circle cx="220" cy="80" r="18" fill="url(#ng3)"/>
+      <circle cx="80" cy="220" r="20" fill="url(#ng3)"/>
+      <circle cx="220" cy="220" r="16" fill="url(#ng2)"/>
+      <circle cx="150" cy="50" r="14" fill="url(#ng1)"/>
+      <circle cx="250" cy="150" r="14" fill="url(#ng2)"/>
       <text x="150" y="157" text-anchor="middle" fill="white" font-family="JetBrains Mono" font-weight="600" font-size="14">∑</text>
       <text x="80" y="85" text-anchor="middle" fill="white" font-family="JetBrains Mono" font-size="11">π</text>
       <text x="220" y="85" text-anchor="middle" fill="white" font-family="JetBrains Mono" font-size="11">λ</text>
@@ -97,139 +84,135 @@
   </div>
 </header>
 
-<!-- Breadcrumb / Progress indicator -->
 <div class="level-bar">
-  <div class="level-item active">🟢 Primaire</div>
-  <div class="level-arrow">→</div>
-  <div class="level-item">🟡 Collège</div>
-  <div class="level-arrow">→</div>
-  <div class="level-item">🟠 Lycée</div>
-  <div class="level-arrow">→</div>
+  <div class="level-item active">🟢 Primaire</div><div class="level-arrow">→</div>
+  <div class="level-item">🟡 Collège</div><div class="level-arrow">→</div>
+  <div class="level-item">🟠 Lycée</div><div class="level-arrow">→</div>
   <div class="level-item">🔴 Supérieur</div>
 </div>
 
-<!-- ═══════════════════════════════ MATHÉMATIQUES ═══════════════════════════════ -->
+<!-- ══════════════ MATHÉMATIQUES ══════════════ -->
 <section id="maths" class="subject-section math-section">
   <div class="section-header">
     <div class="section-icon">∑</div>
     <div>
       <div class="section-tag">Matière 01</div>
       <h2 class="section-title">Mathématiques</h2>
-      <p class="section-desc">Des opérations de base aux intégrales — une progression logique et illustrée</p>
+      <p class="section-desc">Arithmétique · Algèbre · Géométrie · Analyse · Probabilités · Suites · Nombres complexes</p>
     </div>
   </div>
 
-  <!-- Niveau: Primaire -->
+  <!-- PRIMAIRE -->
   <div class="level-block">
-    <div class="level-badge badge-green">🟢 Niveau Primaire (6–11 ans)</div>
-
+    <div class="level-badge badge-green">🟢 Primaire (6–11 ans)</div>
     <div class="formula-grid">
+
       <div class="formula-card">
-        <div class="formula-tag">Opérations de base</div>
-        <h3 class="formula-name">Addition & Soustraction</h3>
+        <div class="formula-tag">Arithmétique</div>
+        <h3 class="formula-name">Les 4 opérations fondamentales</h3>
         <div class="formula-box">
-          <div class="formula-display">\( a + b = b + a \)</div>
-          <div class="formula-display">\( a - b \neq b - a \)</div>
-        </div>
-        <p class="formula-desc">La commutativité de l'addition : l'ordre ne change pas le résultat. La soustraction n'est pas commutative.</p>
-        <div class="schema-container">
-          <svg viewBox="0 0 300 80" class="schema-svg">
-            <rect x="10" y="25" width="50" height="30" rx="8" fill="#6ee7b7" stroke="#059669" stroke-width="2"/>
-            <text x="35" y="45" text-anchor="middle" fill="#065f46" font-size="16" font-weight="bold">3</text>
-            <text x="75" y="47" text-anchor="middle" fill="#374151" font-size="20">+</text>
-            <rect x="90" y="25" width="50" height="30" rx="8" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
-            <text x="115" y="45" text-anchor="middle" fill="#1e40af" font-size="16" font-weight="bold">5</text>
-            <text x="155" y="47" text-anchor="middle" fill="#374151" font-size="20">=</text>
-            <rect x="170" y="25" width="50" height="30" rx="8" fill="#fcd34d" stroke="#d97706" stroke-width="2"/>
-            <text x="195" y="45" text-anchor="middle" fill="#92400e" font-size="16" font-weight="bold">8</text>
-            <text x="240" y="30" text-anchor="middle" fill="#6b7280" font-size="10">= 5 + 3</text>
-            <text x="240" y="45" text-anchor="middle" fill="#6b7280" font-size="10">commutatif ✓</text>
-          </svg>
+          <div class="formula-display">\( a + b = b + a \) &nbsp;(commutativité)</div>
+          <div class="formula-display">\( a \times (b + c) = ab + ac \) &nbsp;(distributivité)</div>
+          <div class="formula-display">\( a \div b = \frac{a}{b},\quad b \neq 0 \)</div>
+          <div class="formula-display">\( (a \times b) \times c = a \times (b \times c) \) &nbsp;(associativité)</div>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>Si tu as <strong>7 pommes</strong> et que tu en donnes <strong>3</strong>, il t'en reste : 7 − 3 = <strong>4 pommes</strong></p>
+          <div class="example-title">💡 Astuce : multiplication rapide</div>
+          <p>\(7 \times 8 = 7 \times (5+3) = 35+21 = \mathbf{56}\)</p>
+          <p>48 bonbons ÷ 6 = <strong>8</strong> par ami</p>
         </div>
       </div>
 
       <div class="formula-card">
-        <div class="formula-tag">Opérations de base</div>
-        <h3 class="formula-name">Multiplication & Division</h3>
+        <div class="formula-tag">Fractions</div>
+        <h3 class="formula-name">Fractions — Opérations</h3>
         <div class="formula-box">
-          <div class="formula-display">\( a \times b = b \times a \)</div>
-          <div class="formula-display">\( a \div b = \frac{a}{b} \)</div>
+          <div class="formula-display">\( \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd} \)</div>
+          <div class="formula-display">\( \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd} \)</div>
+          <div class="formula-display">\( \frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c} \)</div>
+          <div class="formula-display">\( \frac{a}{b} = \frac{a \times k}{b \times k} \) &nbsp;(fractions équivalentes)</div>
         </div>
-        <p class="formula-desc">Multiplier c'est additionner plusieurs fois le même nombre. Diviser c'est partager en parts égales.</p>
         <div class="schema-container">
-          <svg viewBox="0 0 300 90" class="schema-svg">
-            <!-- 3 x 4 = 12 grid -->
-            <g transform="translate(10,10)">
-              <rect x="0" y="0" width="20" height="20" rx="3" fill="#f9a8d4" stroke="#db2777" stroke-width="1.5"/>
-              <rect x="25" y="0" width="20" height="20" rx="3" fill="#f9a8d4" stroke="#db2777" stroke-width="1.5"/>
-              <rect x="50" y="0" width="20" height="20" rx="3" fill="#f9a8d4" stroke="#db2777" stroke-width="1.5"/>
-              <rect x="0" y="25" width="20" height="20" rx="3" fill="#f9a8d4" stroke="#db2777" stroke-width="1.5"/>
-              <rect x="25" y="25" width="20" height="20" rx="3" fill="#f9a8d4" stroke="#db2777" stroke-width="1.5"/>
-              <rect x="50" y="25" width="20" height="20" rx="3" fill="#f9a8d4" stroke="#db2777" stroke-width="1.5"/>
-              <rect x="0" y="50" width="20" height="20" rx="3" fill="#f9a8d4" stroke="#db2777" stroke-width="1.5"/>
-              <rect x="25" y="50" width="20" height="20" rx="3" fill="#f9a8d4" stroke="#db2777" stroke-width="1.5"/>
-              <rect x="50" y="50" width="20" height="20" rx="3" fill="#f9a8d4" stroke="#db2777" stroke-width="1.5"/>
-              <text x="35" y="-3" text-anchor="middle" fill="#6b7280" font-size="9">3 colonnes</text>
-              <text x="-8" y="37" text-anchor="middle" fill="#6b7280" font-size="9" transform="rotate(-90,-8,37)">3 rangs</text>
-            </g>
-            <text x="120" y="50" text-anchor="middle" fill="#374151" font-size="14" font-weight="bold">3 × 3 = 9</text>
-            <text x="210" y="30" fill="#6b7280" font-size="10">÷ 3</text>
-            <text x="200" y="50" fill="#374151" font-size="12">9 ÷ 3 = 3</text>
-            <text x="200" y="65" fill="#6b7280" font-size="9">3 parts de 3</text>
+          <svg viewBox="0 0 300 75" class="schema-svg">
+            <rect x="10" y="15" width="80" height="38" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+            <rect x="10" y="15" width="40" height="38" rx="5" fill="#3b82f6" opacity="0.5"/>
+            <text x="50" y="39" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="bold">1/2</text>
+            <text x="105" y="37" fill="#374151" font-size="18">+</text>
+            <rect x="120" y="15" width="90" height="38" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+            <rect x="120" y="15" width="30" height="38" rx="5" fill="#16a34a" opacity="0.5"/>
+            <text x="165" y="39" text-anchor="middle" fill="#166534" font-size="11" font-weight="bold">1/3</text>
+            <text x="225" y="37" fill="#374151" font-size="18">=</text>
+            <rect x="240" y="15" width="55" height="38" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+            <text x="267" y="39" text-anchor="middle" fill="#92400e" font-size="11" font-weight="bold">5/6</text>
+            <text x="267" y="65" text-anchor="middle" fill="#9ca3af" font-size="8">3/6 + 2/6</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p><strong>4 × 6</strong> = 4 + 4 + 4 + 4 + 4 + 4 = <strong>24</strong></p>
-          <p>24 ÷ 4 = <strong>6</strong> (on partage 24 bonbons en 4 groupes égaux)</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>\(\frac{1}{2} + \frac{1}{3} = \frac{3+2}{6} = \mathbf{\frac{5}{6}}\)</p>
+          <p>\(\frac{3}{4} \div \frac{3}{8} = \frac{3}{4} \times \frac{8}{3} = \mathbf{2}\)</p>
         </div>
       </div>
 
       <div class="formula-card">
-        <div class="formula-tag">Géométrie</div>
-        <h3 class="formula-name">Périmètre & Aire</h3>
+        <div class="formula-tag">Géométrie plane</div>
+        <h3 class="formula-name">Périmètres & Aires des figures</h3>
         <div class="formula-box">
-          <div class="formula-display">\( P_\square = 4 \times c \)</div>
-          <div class="formula-display">\( A_\square = L \times l \)</div>
+          <div class="formula-display">\( P_\text{carré} = 4c \quad A_\text{carré} = c^2 \)</div>
+          <div class="formula-display">\( P_\text{rect} = 2(L+l) \quad A_\text{rect} = L \times l \)</div>
+          <div class="formula-display">\( C_\text{cercle} = 2\pi r \quad A_\text{cercle} = \pi r^2 \)</div>
+          <div class="formula-display">\( A_\triangle = \dfrac{base \times hauteur}{2} \)</div>
+          <div class="formula-display">\( A_\text{trapèze} = \dfrac{(B+b) \times h}{2} \)</div>
         </div>
-        <p class="formula-desc">Le périmètre mesure le tour d'une figure. L'aire mesure la surface.</p>
         <div class="schema-container">
-          <svg viewBox="0 0 300 120" class="schema-svg">
-            <!-- Rectangle -->
-            <rect x="30" y="20" width="120" height="70" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="none"/>
-            <!-- Labels L -->
-            <text x="90" y="15" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold">L = 6 cm</text>
-            <text x="170" y="58" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold">l = 3 cm</text>
-            <!-- Arrow up-down -->
-            <line x1="155" y1="20" x2="155" y2="90" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr)"/>
-            <line x1="30" y1="10" x2="150" y2="10" stroke="#2563eb" stroke-width="1.5"/>
-            <!-- Area label inside -->
-            <text x="90" y="55" text-anchor="middle" fill="#1e40af" font-size="11">A = 6 × 3</text>
-            <text x="90" y="70" text-anchor="middle" fill="#1e40af" font-size="13" font-weight="bold">= 18 cm²</text>
-            <!-- Perimeter -->
-            <text x="250" y="40" text-anchor="middle" fill="#dc2626" font-size="10">P = 2×(6+3)</text>
-            <text x="250" y="55" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold">= 18 cm</text>
+          <svg viewBox="0 0 300 105" class="schema-svg">
+            <rect x="10" y="18" width="85" height="52" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+            <text x="52" y="47" text-anchor="middle" fill="#1e40af" font-size="9">A=L×l</text>
+            <text x="52" y="83" text-anchor="middle" fill="#3b82f6" font-size="8">Rectangle</text>
+            <circle cx="155" cy="44" r="34" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+            <line x1="155" y1="44" x2="189" y2="44" stroke="#db2777" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <text x="173" y="39" fill="#9d174d" font-size="8">r</text>
+            <text x="155" y="92" text-anchor="middle" fill="#db2777" font-size="8">A=πr²</text>
+            <polygon points="240,80 270,80 255,22" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+            <line x1="255" y1="22" x2="255" y2="80" stroke="#059669" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <text x="259" y="56" fill="#065f46" font-size="8">h</text>
+            <text x="255" y="97" text-anchor="middle" fill="#059669" font-size="8">A=bh/2</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>Un jardin rectangulaire de <strong>8 m × 5 m</strong> :</p>
-          <p>Périmètre = 2×(8+5) = <strong>26 m</strong> de clôture</p>
-          <p>Aire = 8×5 = <strong>40 m²</strong> de gazon</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>Carré de côté 6 m : P = 24 m, A = <strong>36 m²</strong></p>
+          <p>Cercle r = 5 cm : C ≈ 31,4 cm, A ≈ <strong>78,5 cm²</strong></p>
         </div>
       </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Géométrie 3D</div>
+        <h3 class="formula-name">Volumes des solides</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( V_\text{cube} = a^3 \)</div>
+          <div class="formula-display">\( V_\text{pavé droit} = L \times l \times h \)</div>
+          <div class="formula-display">\( V_\text{cylindre} = \pi r^2 h \)</div>
+          <div class="formula-display">\( V_\text{sphère} = \dfrac{4}{3}\pi r^3 \)</div>
+          <div class="formula-display">\( V_\text{cône} = \dfrac{1}{3}\pi r^2 h \)</div>
+          <div class="formula-display">\( V_\text{pyramide} = \dfrac{1}{3} \times A_\text{base} \times h \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>Cube côté 4 cm : \(V = 64 \text{ cm}^3\)</p>
+          <p>Balle rayon 3 cm : \(V = \frac{4}{3}\pi \cdot 27 \approx \mathbf{113 \text{ cm}^3}\)</p>
+          <p>Boîte de conserve (r=4, h=10 cm) : \(V = \pi \cdot 16 \cdot 10 \approx \mathbf{502 \text{ cm}^3}\)</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- Niveau: Collège -->
+  <!-- COLLÈGE -->
   <div class="level-block">
-    <div class="level-badge badge-yellow">🟡 Niveau Collège (11–15 ans)</div>
-
+    <div class="level-badge badge-yellow">🟡 Collège (11–15 ans)</div>
     <div class="formula-grid">
+
       <div class="formula-card">
         <div class="formula-tag">Algèbre</div>
         <h3 class="formula-name">Identités remarquables</h3>
@@ -237,30 +220,31 @@
           <div class="formula-display">\( (a+b)^2 = a^2 + 2ab + b^2 \)</div>
           <div class="formula-display">\( (a-b)^2 = a^2 - 2ab + b^2 \)</div>
           <div class="formula-display">\( (a+b)(a-b) = a^2 - b^2 \)</div>
+          <div class="formula-display">\( (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 \)</div>
+          <div class="formula-display">\( a^3 - b^3 = (a-b)(a^2+ab+b^2) \)</div>
+          <div class="formula-display">\( a^3 + b^3 = (a+b)(a^2-ab+b^2) \)</div>
         </div>
-        <p class="formula-desc">Ces formules permettent de développer ou factoriser rapidement des expressions algébriques.</p>
         <div class="schema-container">
-          <svg viewBox="0 0 280 140" class="schema-svg">
-            <!-- Visual proof of (a+b)² -->
-            <rect x="10" y="15" width="80" height="80" rx="3" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2"/>
-            <text x="50" y="58" text-anchor="middle" fill="#5b21b6" font-size="11" font-weight="bold">a²</text>
-            <rect x="90" y="15" width="45" height="80" rx="3" fill="#fbcfe8" stroke="#db2777" stroke-width="2"/>
-            <text x="112" y="58" text-anchor="middle" fill="#9d174d" font-size="10" font-weight="bold">ab</text>
-            <rect x="10" y="95" width="80" height="45" rx="3" fill="#fbcfe8" stroke="#db2777" stroke-width="2"/>
-            <text x="50" y="121" text-anchor="middle" fill="#9d174d" font-size="10" font-weight="bold">ab</text>
-            <rect x="90" y="95" width="45" height="45" rx="3" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
-            <text x="112" y="121" text-anchor="middle" fill="#1e40af" font-size="10" font-weight="bold">b²</text>
-            <text x="67" y="10" text-anchor="middle" fill="#7c3aed" font-size="10">a</text>
-            <text x="112" y="10" text-anchor="middle" fill="#db2777" font-size="10">b</text>
-            <text x="160" y="60" fill="#374151" font-size="10">(a+b)² =</text>
-            <text x="160" y="76" fill="#374151" font-size="10">a² + ab + ab + b²</text>
-            <text x="160" y="92" fill="#374151" font-size="11" font-weight="bold">= a² + 2ab + b²</text>
+          <svg viewBox="0 0 270 130" class="schema-svg">
+            <rect x="10" y="15" width="78" height="78" rx="3" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2"/>
+            <text x="49" y="57" text-anchor="middle" fill="#5b21b6" font-size="12" font-weight="bold">a²</text>
+            <rect x="88" y="15" width="44" height="78" rx="3" fill="#fbcfe8" stroke="#db2777" stroke-width="2"/>
+            <text x="110" y="57" text-anchor="middle" fill="#9d174d" font-size="10" font-weight="bold">ab</text>
+            <rect x="10" y="93" width="78" height="43" rx="3" fill="#fbcfe8" stroke="#db2777" stroke-width="2"/>
+            <text x="49" y="118" text-anchor="middle" fill="#9d174d" font-size="10" font-weight="bold">ab</text>
+            <rect x="88" y="93" width="44" height="43" rx="3" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+            <text x="110" y="118" text-anchor="middle" fill="#1e40af" font-size="10" font-weight="bold">b²</text>
+            <text x="66" y="10" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="bold">a</text>
+            <text x="110" y="10" text-anchor="middle" fill="#db2777" font-size="10" font-weight="bold">b</text>
+            <text x="170" y="55" fill="#374151" font-size="9">(a+b)²=a²+2ab+b²</text>
+            <text x="165" y="72" fill="#6b7280" font-size="8">Preuve géométrique</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>\((3 + 5)^2 = 3^2 + 2 \times 3 \times 5 + 5^2 = 9 + 30 + 25 = \mathbf{64}\)</p>
-          <p>Vérification : \(8^2 = 64\) ✓</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>\((x+3)^2 = x^2+6x+9\)</p>
+          <p>\((2x-5)(2x+5) = 4x^2-25\)</p>
+          <p>Astuce : \(99^2=(100-1)^2=10000-200+1=\mathbf{9801}\)</p>
         </div>
       </div>
 
@@ -268,336 +252,719 @@
         <div class="formula-tag">Géométrie</div>
         <h3 class="formula-name">Théorème de Pythagore</h3>
         <div class="formula-box">
-          <div class="formula-display">\( a^2 + b^2 = c^2 \)</div>
+          <div class="formula-display">\( c^2 = a^2 + b^2 \)</div>
+          <div class="formula-display">\( c = \sqrt{a^2+b^2},\quad a = \sqrt{c^2-b^2} \)</div>
+          <div class="formula-display">\( \sin A = \dfrac{a}{c},\quad \cos A = \dfrac{b}{c},\quad \tan A = \dfrac{a}{b} \)</div>
         </div>
-        <p class="formula-desc">Dans un triangle rectangle, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés.</p>
         <div class="schema-container">
-          <svg viewBox="0 0 300 160" class="schema-svg">
-            <!-- Triangle rectangle -->
+          <svg viewBox="0 0 300 150" class="schema-svg">
             <polygon points="30,130 30,30 160,130" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
-            <!-- Angle droit -->
             <rect x="30" y="110" width="18" height="18" fill="none" stroke="#d97706" stroke-width="2"/>
-            <!-- Labels -->
-            <text x="20" y="85" text-anchor="middle" fill="#dc2626" font-size="14" font-weight="bold">a</text>
+            <text x="20" y="83" text-anchor="middle" fill="#dc2626" font-size="14" font-weight="bold">a</text>
             <text x="95" y="148" text-anchor="middle" fill="#2563eb" font-size="14" font-weight="bold">b</text>
-            <text x="105" y="78" text-anchor="middle" fill="#7c3aed" font-size="14" font-weight="bold">c</text>
-            <!-- Squares visual -->
-            <rect x="175" y="30" width="50" height="50" rx="3" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5" opacity="0.8"/>
-            <text x="200" y="59" text-anchor="middle" fill="#5b21b6" font-size="12" font-weight="bold">c²</text>
-            <rect x="175" y="90" width="35" height="35" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" opacity="0.8"/>
-            <text x="192" y="111" text-anchor="middle" fill="#b91c1c" font-size="11" font-weight="bold">a²</text>
-            <rect x="215" y="90" width="50" height="35" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" opacity="0.8"/>
-            <text x="240" y="111" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="bold">b²</text>
-            <text x="207" y="140" text-anchor="middle" fill="#374151" font-size="10">a² + b² = c²</text>
+            <text x="105" y="75" text-anchor="middle" fill="#7c3aed" font-size="14" font-weight="bold">c</text>
+            <rect x="175" y="20" width="55" height="55" rx="3" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5" opacity="0.85"/>
+            <text x="202" y="51" text-anchor="middle" fill="#5b21b6" font-size="14" font-weight="bold">c²</text>
+            <rect x="175" y="82" width="37" height="37" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" opacity="0.85"/>
+            <text x="193" y="104" text-anchor="middle" fill="#b91c1c" font-size="11" font-weight="bold">a²</text>
+            <rect x="217" y="82" width="58" height="37" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" opacity="0.85"/>
+            <text x="246" y="104" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="bold">b²</text>
+            <text x="207" y="135" text-anchor="middle" fill="#374151" font-size="10">a²+b²=c²</text>
           </svg>
         </div>
         <div class="example-block">
+          <div class="example-title">💡 Triplets pythagoriciens</div>
+          <p>(3,4,5) · (5,12,13) · (8,15,17) · (7,24,25)</p>
+          <p>Échelle contre mur (b=1,8 m, c=5 m) : \(a = \sqrt{25-3{,}24} \approx \mathbf{4{,}7 \text{ m}}\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Géométrie</div>
+        <h3 class="formula-name">Théorème de Thalès & similitude</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( \text{Si } MN \parallel BC \text{ :} \)</div>
+          <div class="formula-display">\( \dfrac{AM}{AB} = \dfrac{AN}{AC} = \dfrac{MN}{BC} \)</div>
+          <div class="formula-display">\( \text{Réciproque : si les rapports sont égaux} \Rightarrow MN \parallel BC \)</div>
+        </div>
+        <div class="example-block">
           <div class="example-title">💡 Exemple</div>
-          <p>Un triangle avec <strong>a = 3 cm</strong> et <strong>b = 4 cm</strong> :</p>
-          <p>\(c = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = \mathbf{5 \, cm}\)</p>
+          <p>AM=4, AB=10, BC=15. Calculer MN.</p>
+          <p>\(\frac{MN}{15} = \frac{4}{10}\) → \(MN = \mathbf{6}\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Équations & Inéquations</div>
+        <h3 class="formula-name">Équations du 1er degré</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( ax + b = 0 \Rightarrow x = -\dfrac{b}{a} \quad (a\neq 0) \)</div>
+          <div class="formula-display">\( ax + b = cx + d \Rightarrow x = \dfrac{d-b}{a-c} \)</div>
+          <div class="formula-display">\( ax + b > 0 \Rightarrow x > -\dfrac{b}{a} \text{ (si } a>0) \)</div>
+          <div class="formula-display">\( ax + b > 0 \Rightarrow x < -\dfrac{b}{a} \text{ (si } a<0) \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>\(3x-7=5\) → \(x=\mathbf{4}\)</p>
+          <p>\(2x+1=5x-8\) → \(-3x=-9\) → \(x=\mathbf{3}\)</p>
+          <p>Inéquation : \(-2x+6>0\) → \(x<\mathbf{3}\)</p>
         </div>
       </div>
 
       <div class="formula-card">
         <div class="formula-tag">Proportionnalité</div>
-        <h3 class="formula-name">Règle de trois & Pourcentages</h3>
+        <h3 class="formula-name">Pourcentages & Taux d'évolution</h3>
         <div class="formula-box">
-          <div class="formula-display">\( \frac{a}{b} = \frac{c}{d} \Rightarrow a \times d = b \times c \)</div>
-          <div class="formula-display">\( t\% \text{ de } A = \frac{t}{100} \times A \)</div>
+          <div class="formula-display">\( t\% \text{ de } A = \dfrac{t}{100} \times A \)</div>
+          <div class="formula-display">\( \text{Augmentation de } t\% : \times\!\left(1+\dfrac{t}{100}\right) \)</div>
+          <div class="formula-display">\( \text{Réduction de } t\% : \times\!\left(1-\dfrac{t}{100}\right) \)</div>
+          <div class="formula-display">\( \text{Taux d'évolution} = \dfrac{V_f - V_i}{V_i} \times 100 \)</div>
+          <div class="formula-display">\( \text{Taux global} = (1+t_1)(1+t_2)\cdots - 1 \)</div>
         </div>
-        <p class="formula-desc">La règle de trois (produit en croix) permet de trouver une 4ème valeur proportionnelle.</p>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>Si 3 stylos coûtent 4,50 €, combien coûtent 7 stylos ?</p>
-          <p>\(\frac{3}{4.50} = \frac{7}{x} \Rightarrow x = \frac{7 \times 4.50}{3} = \mathbf{10.50 \text{ €}}\)</p>
-          <p><br>Réduction de <strong>20%</strong> sur 85 € = 0,20 × 85 = <strong>17 € de remise → 68 €</strong></p>
+          <div class="example-title">💡 Exemples</div>
+          <p>Soldes −30% sur 120 € : \(120 \times 0{,}70 = \mathbf{84 €}\)</p>
+          <p>TVA 20% sur 50 € HT : \(50 \times 1{,}20 = \mathbf{60 € TTC}\)</p>
+          <p>+20% puis −20% : \(1{,}20 \times 0{,}80 - 1 = \mathbf{-4\%}\) (pas zéro !)</p>
         </div>
       </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Statistiques descriptives</div>
+        <h3 class="formula-name">Indicateurs statistiques</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( \bar{x} = \dfrac{\displaystyle\sum_{i=1}^n x_i \cdot n_i}{\displaystyle\sum n_i} \quad \text{(moyenne pondérée)} \)</div>
+          <div class="formula-display">\( \text{Étendue} = x_\max - x_\min \)</div>
+          <div class="formula-display">\( \text{Q}_1 = 1^\text{er}\text{ quartile},\quad \text{Q}_3 = 3^\text{e}\text{ quartile} \)</div>
+          <div class="formula-display">\( \text{IQR} = Q_3 - Q_1 \quad \text{(intervalle interquartile)} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemple</div>
+          <p>Notes : 8, 10, 12, 14, 15, 18 (n=6)</p>
+          <p>Moyenne : \(\bar{x}=\frac{77}{6}\approx\mathbf{12{,}8}\) | Médiane : <strong>13</strong></p>
+          <p>Q₁=10, Q₃=15 → IQR=<strong>5</strong></p>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- Niveau: Lycée -->
+  <!-- LYCÉE -->
   <div class="level-block">
-    <div class="level-badge badge-orange">🟠 Niveau Lycée (15–18 ans)</div>
-
+    <div class="level-badge badge-orange">🟠 Lycée (15–18 ans)</div>
     <div class="formula-grid">
+
       <div class="formula-card">
         <div class="formula-tag">Analyse</div>
-        <h3 class="formula-name">Équation du second degré</h3>
+        <h3 class="formula-name">Équation du 2nd degré</h3>
         <div class="formula-box">
-          <div class="formula-display">\( ax^2 + bx + c = 0 \)</div>
+          <div class="formula-display">\( ax^2+bx+c=0 \quad (a\neq 0) \)</div>
           <div class="formula-display">\( \Delta = b^2 - 4ac \)</div>
-          <div class="formula-display">\( x_{1,2} = \frac{-b \pm \sqrt{\Delta}}{2a} \)</div>
+          <div class="formula-display">\( \Delta > 0 : x_{1,2} = \dfrac{-b \pm \sqrt{\Delta}}{2a} \)</div>
+          <div class="formula-display">\( \Delta = 0 : x_0 = \dfrac{-b}{2a} \)</div>
+          <div class="formula-display">\( \Delta < 0 : \text{aucune racine réelle} \)</div>
+          <div class="formula-display">\( x_1+x_2 = -\dfrac{b}{a} \quad x_1 x_2 = \dfrac{c}{a} \)</div>
+          <div class="formula-display">\( S_\text{sommet} = \left(-\dfrac{b}{2a},\; -\dfrac{\Delta}{4a}\right) \)</div>
         </div>
-        <p class="formula-desc">Le discriminant Δ détermine le nombre de solutions réelles.</p>
         <div class="schema-container">
-          <svg viewBox="0 0 300 140" class="schema-svg">
-            <defs>
-              <linearGradient id="parabolaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#818cf8"/>
-                <stop offset="100%" stop-color="#c084fc"/>
-              </linearGradient>
-            </defs>
-            <!-- Axes -->
-            <line x1="20" y1="110" x2="280" y2="110" stroke="#9ca3af" stroke-width="1.5"/>
-            <line x1="150" y1="10" x2="150" y2="120" stroke="#9ca3af" stroke-width="1.5"/>
-            <text x="285" y="114" fill="#9ca3af" font-size="11">x</text>
-            <text x="153" y="8" fill="#9ca3af" font-size="11">y</text>
-            <!-- Parabola x² - 4x + 3 -->
-            <path d="M 50,110 Q 100,10 150,35 Q 200,60 250,110" fill="none" stroke="url(#parabolaGrad)" stroke-width="3"/>
-            <!-- Roots x=1 (x=80) x=3 (x=220) -->
-            <circle cx="80" cy="110" r="5" fill="#818cf8"/>
-            <circle cx="220" cy="110" r="5" fill="#818cf8"/>
-            <text x="78" y="128" text-anchor="middle" fill="#818cf8" font-size="11" font-weight="bold">x₁</text>
-            <text x="220" y="128" text-anchor="middle" fill="#818cf8" font-size="11" font-weight="bold">x₂</text>
-            <!-- Sommet -->
+          <svg viewBox="0 0 300 125" class="schema-svg">
+            <defs><linearGradient id="parab" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#c084fc"/></linearGradient></defs>
+            <line x1="20" y1="100" x2="280" y2="100" stroke="#9ca3af" stroke-width="1.5"/>
+            <line x1="150" y1="8" x2="150" y2="108" stroke="#9ca3af" stroke-width="1.5"/>
+            <path d="M 58,100 Q 100,15 150,35 Q 200,58 242,100" fill="none" stroke="url(#parab)" stroke-width="2.5"/>
+            <circle cx="88" cy="100" r="5" fill="#818cf8"/>
+            <circle cx="212" cy="100" r="5" fill="#818cf8"/>
+            <text x="85" y="116" text-anchor="middle" fill="#818cf8" font-size="10" font-weight="bold">x₁</text>
+            <text x="212" y="116" text-anchor="middle" fill="#818cf8" font-size="10" font-weight="bold">x₂</text>
             <circle cx="150" cy="35" r="4" fill="#f43f5e"/>
-            <text x="170" y="33" fill="#f43f5e" font-size="10">sommet</text>
-            <!-- Delta label -->
-            <text x="200" y="25" fill="#22c55e" font-size="10">Δ&gt;0 : 2 solutions</text>
+            <text x="162" y="34" fill="#f43f5e" font-size="9">Sommet</text>
+            <text x="25" y="20" fill="#22c55e" font-size="8">Δ&gt;0 : 2 racines</text>
+            <text x="25" y="32" fill="#eab308" font-size="8">Δ=0 : 1 racine double</text>
+            <text x="25" y="44" fill="#ef4444" font-size="8">Δ&lt;0 : Ø réelle</text>
           </svg>
         </div>
         <div class="example-block">
           <div class="example-title">💡 Exemple</div>
-          <p>\(2x^2 - 7x + 3 = 0\)</p>
-          <p>\(\Delta = (-7)^2 - 4 \times 2 \times 3 = 49 - 24 = 25\)</p>
-          <p>\(x_1 = \frac{7 + 5}{4} = 3\) &nbsp;&nbsp; \(x_2 = \frac{7 - 5}{4} = 0.5\)</p>
+          <p>\(2x^2-7x+3=0\) : \(\Delta=49-24=25\)</p>
+          <p>\(x_1=3, x_2=0{,}5\) | Vérif : \(3+0{,}5=\frac{7}{2}\) ✓, \(3\times0{,}5=\frac{3}{2}\) ✓</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Analyse</div>
+        <h3 class="formula-name">Dérivation — Fonctions usuelles & règles</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( (x^n)' = nx^{n-1} \)</div>
+          <div class="formula-display">\( (\sqrt{x})' = \dfrac{1}{2\sqrt{x}} \)</div>
+          <div class="formula-display">\( (e^x)' = e^x,\quad (e^{ax})' = ae^{ax} \)</div>
+          <div class="formula-display">\( (\ln x)' = \dfrac{1}{x} \)</div>
+          <div class="formula-display">\( (\sin x)' = \cos x,\quad (\cos x)' = -\sin x \)</div>
+          <div class="formula-display">\( (\tan x)' = \dfrac{1}{\cos^2 x} = 1+\tan^2 x \)</div>
+          <div class="formula-display">\( (uv)' = u'v+uv' \)</div>
+          <div class="formula-display">\( \left(\dfrac{u}{v}\right)' = \dfrac{u'v-uv'}{v^2} \)</div>
+          <div class="formula-display">\( (f\circ g)' = g'\cdot(f'\circ g) \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>\(f(x)=x^3\sin x\) : \(f'=3x^2\sin x+x^3\cos x\)</p>
+          <p>\(g(x)=e^{x^2}\) : \(g'=2x\,e^{x^2}\) (composée)</p>
+          <p>\(h(x)=\frac{x+1}{x-1}\) : \(h'=\frac{(x-1)-(x+1)}{(x-1)^2}=\frac{-2}{(x-1)^2}\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Analyse</div>
+        <h3 class="formula-name">Intégration — Primitives & aires</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( \int x^n dx = \dfrac{x^{n+1}}{n+1}+C \quad (n\neq -1) \)</div>
+          <div class="formula-display">\( \int e^x dx = e^x+C \)</div>
+          <div class="formula-display">\( \int \dfrac{1}{x} dx = \ln|x|+C \)</div>
+          <div class="formula-display">\( \int \sin x\,dx = -\cos x+C \)</div>
+          <div class="formula-display">\( \int \cos x\,dx = \sin x+C \)</div>
+          <div class="formula-display">\( \int_a^b f(x)dx = [F(x)]_a^b = F(b)-F(a) \)</div>
+          <div class="formula-display">\( \int u\,v'\,dx = [uv]_a^b - \int u'v\,dx \quad\text{(par parties)} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>\(\int_0^2 x^3\,dx=\left[\frac{x^4}{4}\right]_0^2=4\)</p>
+          <p>\(\int_1^e \frac{1}{x}dx=[\ln x]_1^e=1\)</p>
+          <p>\(\int xe^x dx = xe^x-e^x+C=(x-1)e^x+C\)</p>
         </div>
       </div>
 
       <div class="formula-card">
         <div class="formula-tag">Trigonométrie</div>
-        <h3 class="formula-name">Fonctions Trigonométriques</h3>
+        <h3 class="formula-name">Trigonométrie — Formules complètes</h3>
         <div class="formula-box">
-          <div class="formula-display">\( \cos^2\theta + \sin^2\theta = 1 \)</div>
-          <div class="formula-display">\( \tan\theta = \frac{\sin\theta}{\cos\theta} \)</div>
-          <div class="formula-display">\( \cos(2\theta) = 1 - 2\sin^2\theta \)</div>
+          <div class="formula-display">\( \cos^2\theta+\sin^2\theta=1 \)</div>
+          <div class="formula-display">\( \tan\theta=\dfrac{\sin\theta}{\cos\theta} \)</div>
+          <div class="formula-display">\( \sin(a\pm b)=\sin a\cos b \pm \cos a\sin b \)</div>
+          <div class="formula-display">\( \cos(a\pm b)=\cos a\cos b \mp \sin a\sin b \)</div>
+          <div class="formula-display">\( \sin(2a)=2\sin a\cos a \)</div>
+          <div class="formula-display">\( \cos(2a)=\cos^2a-\sin^2a=1-2\sin^2a \)</div>
+          <div class="formula-display">\( \sin^2 a = \dfrac{1-\cos 2a}{2},\quad \cos^2 a = \dfrac{1+\cos 2a}{2} \)</div>
         </div>
-        <p class="formula-desc">Les fonctions trigonométriques décrivent les rapports des côtés d'un triangle rectangle.</p>
         <div class="schema-container">
-          <svg viewBox="0 0 300 130" class="schema-svg">
-            <!-- Unit circle simplified -->
-            <circle cx="70" cy="65" r="50" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
-            <line x1="20" y1="65" x2="120" y2="65" stroke="#9ca3af" stroke-width="1"/>
-            <line x1="70" y1="15" x2="70" y2="115" stroke="#9ca3af" stroke-width="1"/>
-            <!-- Radius at 40° -->
-            <line x1="70" y1="65" x2="108" y2="33" stroke="#3b82f6" stroke-width="2.5"/>
-            <!-- cos projection -->
-            <line x1="108" y1="33" x2="108" y2="65" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
-            <line x1="70" y1="65" x2="108" y2="65" stroke="#22c55e" stroke-width="2" stroke-dasharray="4,3"/>
-            <circle cx="108" cy="33" r="4" fill="#3b82f6"/>
-            <text x="120" y="52" fill="#ef4444" font-size="10" font-weight="bold">sin θ</text>
-            <text x="88" y="78" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="bold">cos θ</text>
-            <text x="78" y="52" fill="#3b82f6" font-size="10">θ</text>
-            <!-- Sine curve -->
-            <path d="M 140,65 Q 160,30 175,65 Q 190,100 205,65 Q 220,30 235,65 Q 250,100 265,65" fill="none" stroke="#ef4444" stroke-width="2"/>
-            <text x="200" y="115" text-anchor="middle" fill="#9ca3af" font-size="9">Courbe sin(x)</text>
+          <svg viewBox="0 0 300 120" class="schema-svg">
+            <circle cx="70" cy="60" r="48" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+            <line x1="22" y1="60" x2="118" y2="60" stroke="#9ca3af" stroke-width="1"/>
+            <line x1="70" y1="12" x2="70" y2="108" stroke="#9ca3af" stroke-width="1"/>
+            <line x1="70" y1="60" x2="110" y2="28" stroke="#3b82f6" stroke-width="2.5"/>
+            <line x1="110" y1="28" x2="110" y2="60" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
+            <line x1="70" y1="60" x2="110" y2="60" stroke="#22c55e" stroke-width="2" stroke-dasharray="4,3"/>
+            <circle cx="110" cy="28" r="4" fill="#3b82f6"/>
+            <text x="122" y="46" fill="#ef4444" font-size="10" font-weight="bold">sin θ</text>
+            <text x="90" y="74" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="bold">cos θ</text>
+            <text x="76" y="50" fill="#3b82f6" font-size="10">θ</text>
+            <text x="150" y="18" fill="#374151" font-size="9" font-weight="bold">Valeurs clés</text>
+            <text x="150" y="32" fill="#9ca3af" font-size="8">0° : (1, 0)</text>
+            <text x="150" y="44" fill="#9ca3af" font-size="8">30° : (√3/2, 1/2)</text>
+            <text x="150" y="56" fill="#9ca3af" font-size="8">45° : (√2/2, √2/2)</text>
+            <text x="150" y="68" fill="#9ca3af" font-size="8">60° : (1/2, √3/2)</text>
+            <text x="150" y="80" fill="#9ca3af" font-size="8">90° : (0, 1)</text>
+            <text x="150" y="92" fill="#9ca3af" font-size="8">180° : (−1, 0)</text>
           </svg>
         </div>
         <div class="example-block">
           <div class="example-title">💡 Exemple</div>
-          <p>Dans un triangle rectangle, avec angle de <strong>30°</strong> et hypoténuse de <strong>10 cm</strong> :</p>
-          <p>côté opposé = sin(30°) × 10 = 0,5 × 10 = <strong>5 cm</strong></p>
-          <p>côté adjacent = cos(30°) × 10 ≈ 0,866 × 10 ≈ <strong>8,66 cm</strong></p>
+          <p>\(\sin(75°)=\sin(45°+30°)=\frac{\sqrt{6}+\sqrt{2}}{4}\approx 0{,}966\)</p>
         </div>
       </div>
 
-      <div class="formula-card">
-        <div class="formula-tag">Dérivation</div>
-        <h3 class="formula-name">Règles de dérivation</h3>
+      <!-- ★★ SUITES ARITHMÉTIQUES ★★ -->
+      <div class="formula-card highlight-card">
+        <div class="formula-tag tag-new">★ Suites & Séries</div>
+        <h3 class="formula-name">Suites Arithmétiques</h3>
         <div class="formula-box">
-          <div class="formula-display">\( (x^n)' = nx^{n-1} \)</div>
-          <div class="formula-display">\( (uv)' = u'v + uv' \)</div>
-          <div class="formula-display">\( \left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2} \)</div>
-          <div class="formula-display">\( (\sin x)' = \cos x \quad (\cos x)' = -\sin x \)</div>
+          <div class="formula-display">\( u_{n+1} = u_n + r \quad \text{(raison }r\text{)} \)</div>
+          <div class="formula-display">\( u_n = u_1 + (n-1)\,r \)</div>
+          <div class="formula-display">\( u_n = u_0 + n\,r \)</div>
+          <div class="formula-display">\( S_n = \dfrac{n(u_1+u_n)}{2} \)</div>
+          <div class="formula-display">\( S_n = \dfrac{n\bigl(2u_1+(n-1)r\bigr)}{2} \)</div>
+          <div class="formula-display">\( \displaystyle\sum_{k=1}^{n} k = \dfrac{n(n+1)}{2} \)</div>
+          <div class="formula-display">\( \displaystyle\sum_{k=1}^{n} k^2 = \dfrac{n(n+1)(2n+1)}{6} \)</div>
         </div>
-        <p class="formula-desc">La dérivée mesure la vitesse de variation d'une fonction en un point.</p>
-        <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>\(f(x) = 3x^4 - 2x^2 + 5\)</p>
-          <p>\(f'(x) = 3 \times 4x^3 - 2 \times 2x + 0 = \mathbf{12x^3 - 4x}\)</p>
-        </div>
-      </div>
-
-      <div class="formula-card">
-        <div class="formula-tag">Intégration</div>
-        <h3 class="formula-name">Calcul Intégral</h3>
-        <div class="formula-box">
-          <div class="formula-display">\( \int_a^b f(x)\,dx = [F(x)]_a^b = F(b) - F(a) \)</div>
-          <div class="formula-display">\( \int x^n\,dx = \frac{x^{n+1}}{n+1} + C \)</div>
-        </div>
-        <p class="formula-desc">L'intégrale calcule l'aire sous la courbe d'une fonction entre deux bornes.</p>
+        <p class="formula-desc">Chaque terme est obtenu en ajoutant la raison <em>r</em> au précédent. La représentation graphique est une droite (fonction affine).</p>
         <div class="schema-container">
-          <svg viewBox="0 0 280 130" class="schema-svg">
-            <defs>
-              <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#818cf8" stop-opacity="0.7"/>
-                <stop offset="100%" stop-color="#818cf8" stop-opacity="0.1"/>
-              </linearGradient>
-            </defs>
-            <line x1="20" y1="110" x2="260" y2="110" stroke="#9ca3af" stroke-width="1.5"/>
-            <line x1="40" y1="10" x2="40" y2="115" stroke="#9ca3af" stroke-width="1.5"/>
-            <path d="M 50,100 C 80,80 120,40 180,30 C 220,22 240,25 250,20" fill="none" stroke="#818cf8" stroke-width="2.5"/>
-            <path d="M 90,90 C 120,60 150,40 180,30 L 180,110 Z" fill="url(#areaGrad)"/>
-            <line x1="90" y1="110" x2="90" y2="90" stroke="#c084fc" stroke-width="2" stroke-dasharray="4,3"/>
-            <line x1="180" y1="110" x2="180" y2="30" stroke="#c084fc" stroke-width="2" stroke-dasharray="4,3"/>
-            <text x="90" y="122" text-anchor="middle" fill="#818cf8" font-size="11" font-weight="bold">a</text>
-            <text x="180" y="122" text-anchor="middle" fill="#818cf8" font-size="11" font-weight="bold">b</text>
-            <text x="135" y="88" text-anchor="middle" fill="#5b21b6" font-size="11" font-weight="bold">∫ f(x)dx</text>
-            <text x="135" y="100" text-anchor="middle" fill="#5b21b6" font-size="9">= aire colorée</text>
+          <svg viewBox="0 0 300 100" class="schema-svg">
+            <circle cx="30"  cy="72" r="11" fill="#818cf8" opacity="0.9"/>
+            <circle cx="90"  cy="57" r="11" fill="#818cf8" opacity="0.9"/>
+            <circle cx="150" cy="42" r="11" fill="#818cf8" opacity="0.9"/>
+            <circle cx="210" cy="27" r="11" fill="#818cf8" opacity="0.9"/>
+            <circle cx="270" cy="12" r="11" fill="#818cf8" opacity="0.9"/>
+            <line x1="30" y1="72" x2="270" y2="12" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <text x="30"  y="76" text-anchor="middle" fill="white" font-size="8" font-weight="bold">u₁</text>
+            <text x="90"  y="61" text-anchor="middle" fill="white" font-size="8" font-weight="bold">u₂</text>
+            <text x="150" y="46" text-anchor="middle" fill="white" font-size="8" font-weight="bold">u₃</text>
+            <text x="210" y="31" text-anchor="middle" fill="white" font-size="8" font-weight="bold">u₄</text>
+            <text x="270" y="16" text-anchor="middle" fill="white" font-size="8" font-weight="bold">u₅</text>
+            <line x1="30" y1="88" x2="90" y2="88" stroke="#a78bfa" stroke-width="2"/>
+            <polygon points="90,84 98,88 90,92" fill="#a78bfa"/>
+            <text x="60" y="99" text-anchor="middle" fill="#a78bfa" font-size="9" font-weight="bold">+r</text>
+            <text x="30"  y="98" text-anchor="middle" fill="#6b7280" font-size="7">2</text>
+            <text x="90"  y="98" text-anchor="middle" fill="#6b7280" font-size="7">5</text>
+            <text x="150" y="98" text-anchor="middle" fill="#6b7280" font-size="7">8</text>
+            <text x="210" y="98" text-anchor="middle" fill="#6b7280" font-size="7">11</text>
+            <text x="270" y="98" text-anchor="middle" fill="#6b7280" font-size="7">14</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>\(\int_1^3 x^2\,dx = \left[\frac{x^3}{3}\right]_1^3 = \frac{27}{3} - \frac{1}{3} = 9 - \frac{1}{3} = \mathbf{\frac{26}{3}}\)</p>
+          <div class="example-title">💡 Exemples</div>
+          <p><strong>Suite :</strong> 3, 7, 11, 15, … (u₁=3, r=4)</p>
+          <p>Terme général : \(u_n = 3+(n-1)\times 4 = 4n-1\)</p>
+          <p>\(u_{10} = 4\times10-1 = \mathbf{39}\)</p>
+          <p>Somme 10 premiers : \(S_{10}=\frac{10(3+39)}{2}=\mathbf{210}\)</p>
+          <hr style="border-color:rgba(255,255,255,0.1);margin:0.5rem 0">
+          <p><em>Gauss :</em> \(1+2+\cdots+100 = \frac{100\times101}{2}=\mathbf{5050}\)</p>
+          <p><em>Économie :</em> remboursement annuité constante = suite arithmétique</p>
+          <p><em>Physique :</em> chute libre : distances parcourues = 1, 3, 5, 7… (suite arithmétique de raison 2)</p>
         </div>
       </div>
+
+      <!-- ★★ SUITES GÉOMÉTRIQUES ★★ -->
+      <div class="formula-card highlight-card">
+        <div class="formula-tag tag-new">★ Suites & Séries</div>
+        <h3 class="formula-name">Suites Géométriques</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( u_{n+1} = u_n \times q \quad \text{(raison }q\text{)} \)</div>
+          <div class="formula-display">\( u_n = u_1 \times q^{n-1} \)</div>
+          <div class="formula-display">\( u_n = u_0 \times q^{n} \)</div>
+          <div class="formula-display">\( S_n = u_1 \cdot \dfrac{1-q^n}{1-q} \quad (q\neq 1) \)</div>
+          <div class="formula-display">\( S_n = u_1 \cdot \dfrac{q^n-1}{q-1} \quad (q\neq 1) \)</div>
+          <div class="formula-display">\( \text{Si }|q|<1 : S_\infty = \dfrac{u_1}{1-q} \)</div>
+          <div class="formula-display">\( \displaystyle\sum_{k=0}^{n} q^k = \dfrac{1-q^{n+1}}{1-q} \)</div>
+        </div>
+        <p class="formula-desc">Chaque terme est obtenu en multipliant par la raison <em>q</em>. Modélise la croissance exponentielle : intérêts composés, population, radioactivité.</p>
+        <div class="schema-container">
+          <svg viewBox="0 0 300 110" class="schema-svg">
+            <rect x="18"  y="80" width="28" height="15" rx="3" fill="#34d399" opacity="0.9"/>
+            <rect x="68"  y="65" width="28" height="30" rx="3" fill="#34d399" opacity="0.9"/>
+            <rect x="118" y="40" width="28" height="55" rx="3" fill="#34d399" opacity="0.9"/>
+            <rect x="168" y="12" width="28" height="83" rx="3" fill="#059669" opacity="0.9"/>
+            <rect x="218" y="4"  width="28" height="91" rx="3" fill="#065f46" opacity="0.9"/>
+            <text x="32"  y="104" text-anchor="middle" fill="#6b7280" font-size="8">1</text>
+            <text x="82"  y="104" text-anchor="middle" fill="#6b7280" font-size="8">2</text>
+            <text x="132" y="104" text-anchor="middle" fill="#6b7280" font-size="8">4</text>
+            <text x="182" y="104" text-anchor="middle" fill="#6b7280" font-size="8">8</text>
+            <text x="232" y="104" text-anchor="middle" fill="#065f46" font-size="8">16</text>
+            <path d="M 32,87 Q 82,72 132,57 Q 182,25 232,8" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-dasharray="4,3"/>
+            <text x="265" y="30" fill="#34d399" font-size="9" font-weight="bold">q = 2</text>
+            <text x="265" y="44" fill="#9ca3af" font-size="8">×2 à</text>
+            <text x="265" y="56" fill="#9ca3af" font-size="8">chaque</text>
+            <text x="265" y="68" fill="#9ca3af" font-size="8">étape</text>
+          </svg>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p><strong>Suite :</strong> 1, 3, 9, 27, … (u₁=1, q=3)</p>
+          <p>\(u_n=3^{n-1}\) → \(u_6=243\)</p>
+          <p>\(S_6=\frac{1-3^6}{1-3}=\frac{-728}{-2}=\mathbf{364}\)</p>
+          <hr style="border-color:rgba(255,255,255,0.1);margin:0.5rem 0">
+          <p><em>Intérêts composés :</em> 1000 € à 5%/an sur 10 ans :</p>
+          <p>\(C=1000\times1{,}05^{10}\approx\mathbf{1628{,}89 €}\)</p>
+          <p><em>Série infinie :</em> \(\sum_{k=0}^\infty \left(\frac{1}{2}\right)^k = \frac{1}{1-\frac{1}{2}}=\mathbf{2}\)</p>
+          <p><em>Radioactivité (q = ½) :</em> après 3 demi-vies → \((1/2)^3 = 12{,}5\%\) restant</p>
+          <p><em>Arbre fractal :</em> chaque branche = raison q = 2/3</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Logarithmes & Exponentielle</div>
+        <h3 class="formula-name">Ln, Log & Exponentielle</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( e^{a+b}=e^a\cdot e^b,\quad (e^a)^b=e^{ab} \)</div>
+          <div class="formula-display">\( \ln(ab)=\ln a+\ln b \)</div>
+          <div class="formula-display">\( \ln\!\left(\tfrac{a}{b}\right)=\ln a-\ln b \)</div>
+          <div class="formula-display">\( \ln(a^n)=n\ln a \)</div>
+          <div class="formula-display">\( e^{\ln x}=x,\quad \ln(e^x)=x \)</div>
+          <div class="formula-display">\( \log_{10}x=\dfrac{\ln x}{\ln 10}\approx\dfrac{\ln x}{2{,}303} \)</div>
+          <div class="formula-display">\( a^x = e^{x\ln a} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>\(e^{2x}=5\) → \(2x=\ln 5\) → \(x\approx\mathbf{0{,}805}\)</p>
+          <p>\(\ln 8=3\ln 2\approx 2{,}079\)</p>
+          <p>Doubling time : si \(q=1{,}07\), \(n=\frac{\ln 2}{\ln 1{,}07}\approx\mathbf{10{,}2}\) ans</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Probabilités</div>
+        <h3 class="formula-name">Probabilités — Fondements</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( 0\leq P(A)\leq 1,\quad P(\Omega)=1 \)</div>
+          <div class="formula-display">\( P(\bar{A})=1-P(A) \)</div>
+          <div class="formula-display">\( P(A\cup B)=P(A)+P(B)-P(A\cap B) \)</div>
+          <div class="formula-display">\( P(A|B)=\dfrac{P(A\cap B)}{P(B)} \)</div>
+          <div class="formula-display">\( \text{Indépendance : }P(A\cap B)=P(A)\cdot P(B) \)</div>
+          <div class="formula-display">\( P(B)=\sum_i P(B|A_i)P(A_i) \quad\text{(prob. totales)} \)</div>
+          <div class="formula-display">\( P(A_i|B)=\dfrac{P(B|A_i)P(A_i)}{P(B)} \quad\text{(Bayes)} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>Dé : P(pair)=1/2, P(≥5)=1/3</p>
+          <p>P(pair∪≥5) = 1/2+1/3−1/6 = <strong>2/3</strong></p>
+          <p>Bayes : test médical — P(malade|+) = ?</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Probabilités</div>
+        <h3 class="formula-name">Lois de probabilité</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( \binom{n}{k}=\dfrac{n!}{k!(n-k)!} \)</div>
+          <div class="formula-display">\( \mathcal{B}(n,p) : P(X=k)=\binom{n}{k}p^k(1-p)^{n-k} \)</div>
+          <div class="formula-display">\( E[X]=np,\quad \sigma^2=np(1-p) \)</div>
+          <div class="formula-display">\( \mathcal{N}(\mu,\sigma^2) : f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \)</div>
+          <div class="formula-display">\( P(\mu-\sigma\leq X\leq\mu+\sigma)\approx 68\% \)</div>
+          <div class="formula-display">\( P(\mu-2\sigma\leq X\leq\mu+2\sigma)\approx 95\% \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemple loi binomiale</div>
+          <p>5 lancers pile/face, P(exactement 3 piles) :</p>
+          <p>\(P(X=3)=\binom{5}{3}(0{,}5)^5=10/32\approx\mathbf{31{,}25\%}\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Statistiques inférentielles</div>
+        <h3 class="formula-name">Variance, Écart-type & Intervalles</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( \sigma^2=\dfrac{1}{n}\sum(x_i-\bar{x})^2 \)</div>
+          <div class="formula-display">\( \sigma=\sqrt{\sigma^2} \)</div>
+          <div class="formula-display">\( \text{IC 95\%}: \bar{x}\pm 1{,}96\dfrac{\sigma}{\sqrt{n}} \)</div>
+          <div class="formula-display">\( \text{IC 99\%}: \bar{x}\pm 2{,}58\dfrac{\sigma}{\sqrt{n}} \)</div>
+          <div class="formula-display">\( \text{cov}(X,Y)=\dfrac{1}{n}\sum(x_i-\bar{x})(y_i-\bar{y}) \)</div>
+          <div class="formula-display">\( r=\dfrac{\text{cov}(X,Y)}{\sigma_X\sigma_Y} \in [-1,1] \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemple</div>
+          <p>Notes : 10,12,14,16,18 → \(\bar{x}=14\), \(\sigma=\sqrt{8}\approx2{,}83\)</p>
+          <p>IC 95% avec n=25 : \(14\pm1{,}96\times\frac{2{,}83}{5}\approx14\pm1{,}11\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Vecteurs & Géométrie analytique</div>
+        <h3 class="formula-name">Vecteurs, Droites & Plans</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( \|\vec{u}\|=\sqrt{x^2+y^2+z^2} \)</div>
+          <div class="formula-display">\( \vec{u}\cdot\vec{v}=x_ux_v+y_uy_v+z_uz_v=\|\vec{u}\|\|\vec{v}\|\cos\theta \)</div>
+          <div class="formula-display">\( d(A,B)=\sqrt{\Delta x^2+\Delta y^2+\Delta z^2} \)</div>
+          <div class="formula-display">\( \text{Droite}: \vec{r}=\vec{r_0}+t\vec{d} \)</div>
+          <div class="formula-display">\( \text{Plan}: ax+by+cz=d \)</div>
+          <div class="formula-display">\( d(\text{point},\text{plan})=\dfrac{|ax_0+by_0+cz_0-d|}{\sqrt{a^2+b^2+c^2}} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemple</div>
+          <p>\(\vec{u}=(3,4,0)\), \(\vec{v}=(1,0,0)\) : \(\vec{u}\cdot\vec{v}=3\)</p>
+          <p>\(\|\vec{u}\|=5\) → \(\cos\theta=3/5\) → \(\theta=\mathbf{53{,}1°}\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Nombres complexes</div>
+        <h3 class="formula-name">Nombres Complexes</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( z=a+ib,\quad i^2=-1 \)</div>
+          <div class="formula-display">\( |z|=\sqrt{a^2+b^2},\quad \bar{z}=a-ib \)</div>
+          <div class="formula-display">\( z=re^{i\theta}=r(\cos\theta+i\sin\theta) \)</div>
+          <div class="formula-display">\( z\bar{z}=|z|^2 \)</div>
+          <div class="formula-display">\( e^{i\pi}+1=0 \quad\text{(identité d'Euler)} \)</div>
+          <div class="formula-display">\( z^n=r^ne^{in\theta} \quad\text{(De Moivre)} \)</div>
+          <div class="formula-display">\( \cos\theta=\dfrac{e^{i\theta}+e^{-i\theta}}{2},\quad \sin\theta=\dfrac{e^{i\theta}-e^{-i\theta}}{2i} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>\(z=1+i\sqrt{3}\) : \(|z|=2\), \(\theta=\pi/3\) → \(z=2e^{i\pi/3}\)</p>
+          <p>\(z^6=(2e^{i\pi/3})^6=64e^{2i\pi}=\mathbf{64}\)</p>
+          <p>\(i^{47}=i^{4\times11+3}=i^3=\mathbf{-i}\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Limites</div>
+        <h3 class="formula-name">Limites usuelles & Comparaison</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( \lim_{x\to0}\dfrac{\sin x}{x}=1 \)</div>
+          <div class="formula-display">\( \lim_{x\to0}\dfrac{e^x-1}{x}=1 \)</div>
+          <div class="formula-display">\( \lim_{x\to0}\dfrac{\ln(1+x)}{x}=1 \)</div>
+          <div class="formula-display">\( \lim_{x\to+\infty}\dfrac{e^x}{x^n}=+\infty \quad\text{(exp l'emporte)} \)</div>
+          <div class="formula-display">\( \lim_{x\to+\infty}\dfrac{\ln x}{x^n}=0 \quad\text{(ln négligeable)} \)</div>
+          <div class="formula-display">\( \lim_{x\to+\infty}\left(1+\tfrac{1}{x}\right)^x=e \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Hiérarchie des croissances</div>
+          <p>Pour \(x\to+\infty\) : \(\ln x \ll x^\alpha \ll e^x\)</p>
+          <p>Formes indéterminées : 0/0, ∞/∞, 0×∞ → lever avec L'Hôpital ou DL</p>
+        </div>
+      </div>
+
     </div>
   </div>
+
+  <!-- SUPÉRIEUR -->
+  <div class="level-block">
+    <div class="level-badge badge-red">🔴 Supérieur (Bac+)</div>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-tag">Analyse</div>
+        <h3 class="formula-name">Développements limités (Taylor-Young)</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( f(x)=\displaystyle\sum_{k=0}^n\dfrac{f^{(k)}(a)}{k!}(x-a)^k+o\!\bigl((x-a)^n\bigr) \)</div>
+          <div class="formula-display">\( e^x=1+x+\dfrac{x^2}{2!}+\dfrac{x^3}{3!}+\cdots \)</div>
+          <div class="formula-display">\( \sin x=x-\dfrac{x^3}{6}+\dfrac{x^5}{120}-\cdots \)</div>
+          <div class="formula-display">\( \cos x=1-\dfrac{x^2}{2}+\dfrac{x^4}{24}-\cdots \)</div>
+          <div class="formula-display">\( \ln(1+x)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}-\cdots \quad(|x|<1) \)</div>
+          <div class="formula-display">\( (1+x)^\alpha=1+\alpha x+\dfrac{\alpha(\alpha-1)}{2!}x^2+\cdots \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Applications</div>
+          <p>\(e^{0{,}1}\approx 1+0{,}1+0{,}005=\mathbf{1{,}105}\)</p>
+          <p>Limite : \(\lim_{x\to0}\frac{1-\cos x}{x^2}=\frac{x^2/2}{x^2}=\mathbf{\frac{1}{2}}\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Algèbre linéaire</div>
+        <h3 class="formula-name">Matrices, Déterminants & SEL</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( \det\begin{pmatrix}a&b\\c&d\end{pmatrix}=ad-bc \)</div>
+          <div class="formula-display">\( \det(AB)=\det(A)\det(B) \)</div>
+          <div class="formula-display">\( A^{-1}=\dfrac{1}{\det A}\text{adj}(A) \quad(\det A\neq0) \)</div>
+          <div class="formula-display">\( AX=B\Rightarrow X=A^{-1}B \)</div>
+          <div class="formula-display">\( \text{tr}(AB)=\text{tr}(BA) \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Système 2×2</div>
+          <p>\(\begin{cases}2x+y=5\\x-y=1\end{cases}\)</p>
+          <p>det=−3, \(x=2, y=1\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Analyse</div>
+        <h3 class="formula-name">Équations différentielles</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( y'+ay=0\Rightarrow y=Ce^{-ax} \)</div>
+          <div class="formula-display">\( y'+ay=b\Rightarrow y=\tfrac{b}{a}+Ce^{-ax} \)</div>
+          <div class="formula-display">\( y''+\omega_0^2y=0\Rightarrow y=A\cos\omega_0 t+B\sin\omega_0 t \)</div>
+          <div class="formula-display">\( y''+2\xi\omega_0y'+\omega_0^2y=0 \quad\text{(oscillateur amorti)} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Circuit RC</div>
+          <p>\(RC\,u'+u=E\) → \(u(t)=E\bigl(1-e^{-t/\tau}\bigr)\), \(\tau=RC\)</p>
+          <p>À \(t=\tau\) : \(u\approx0{,}63E\) (charge à 63%)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag">Analyse</div>
+        <h3 class="formula-name">Transformée de Fourier & Laplace</h3>
+        <div class="formula-box">
+          <div class="formula-display">\( \hat{f}(\xi)=\int_{-\infty}^{+\infty}f(x)e^{-2\pi i x\xi}dx \)</div>
+          <div class="formula-display">\( \mathcal{L}\{f\}(s)=\int_0^\infty f(t)e^{-st}dt \)</div>
+          <div class="formula-display">\( \mathcal{L}\{f'\}=sF(s)-f(0) \)</div>
+          <div class="formula-display">\( \mathcal{L}\{e^{at}\}=\dfrac{1}{s-a} \quad(s>a) \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Application</div>
+          <p>Résoudre une EDO par Laplace : transformer → algèbre → inverser</p>
+          <p>Signal audio : FFT décompose en fréquences (mp3, égaliseur)</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </section>
 
-<!-- ═══════════════════════════════ PHYSIQUE ═══════════════════════════════ -->
+<!-- ══════════════ PHYSIQUE ══════════════ -->
 <section id="physique" class="subject-section phys-section">
   <div class="section-header">
     <div class="section-icon phys-icon">⚡</div>
     <div>
       <div class="section-tag phys-tag">Matière 02</div>
       <h2 class="section-title phys-title">Physique</h2>
-      <p class="section-desc">Des lois du mouvement à la relativité — comprendre les forces qui gouvernent l'univers</p>
+      <p class="section-desc">Mécanique · Électricité · Thermodynamique · Optique · Ondes · Relativité · Électromagnétisme</p>
     </div>
   </div>
 
-  <!-- Niveau Collège -->
+  <!-- COLLÈGE -->
   <div class="level-block">
-    <div class="level-badge badge-yellow">🟡 Niveau Collège</div>
-
+    <div class="level-badge badge-yellow">🟡 Collège</div>
     <div class="formula-grid">
+
       <div class="formula-card">
-        <div class="formula-tag phys-tag-sm">Mécanique</div>
-        <h3 class="formula-name">Vitesse & Mouvement</h3>
+        <div class="formula-tag phys-tag-sm">Cinématique</div>
+        <h3 class="formula-name">Vitesse & Mouvement uniforme</h3>
         <div class="formula-box phys-box">
-          <div class="formula-display">\( v = \frac{d}{t} \)</div>
+          <div class="formula-display">\( v = \dfrac{d}{t} \)</div>
           <div class="formula-display">\( d = v \times t \)</div>
+          <div class="formula-display">\( t = \dfrac{d}{v} \)</div>
+          <div class="formula-display">\( 1\text{ m/s} = 3{,}6\text{ km/h} \)</div>
         </div>
-        <p class="formula-desc">v = vitesse (m/s), d = distance (m), t = temps (s). La vitesse moyenne est la distance parcourue divisée par le temps.</p>
         <div class="schema-container">
-          <svg viewBox="0 0 300 90" class="schema-svg">
-            <!-- Timeline -->
+          <svg viewBox="0 0 300 85" class="schema-svg">
             <line x1="30" y1="50" x2="260" y2="50" stroke="#9ca3af" stroke-width="2"/>
-            <!-- Arrow -->
-            <polygon points="260,44 275,50 260,56" fill="#f59e0b"/>
-            <!-- Car icon simplified -->
-            <rect x="20" y="38" width="35" height="20" rx="5" fill="#fcd34d" stroke="#d97706" stroke-width="2"/>
-            <circle cx="28" cy="58" r="5" fill="#374151"/>
-            <circle cx="47" cy="58" r="5" fill="#374151"/>
-            <!-- Distance arrow -->
+            <polygon points="260,44 278,50 260,56" fill="#f59e0b"/>
+            <rect x="18" y="38" width="35" height="20" rx="5" fill="#fcd34d" stroke="#d97706" stroke-width="2"/>
+            <circle cx="26" cy="58" r="5" fill="#374151"/>
+            <circle cx="45" cy="58" r="5" fill="#374151"/>
             <line x1="55" y1="35" x2="200" y2="35" stroke="#f59e0b" stroke-width="2"/>
             <polygon points="200,30 210,35 200,40" fill="#f59e0b"/>
-            <text x="127" y="28" text-anchor="middle" fill="#d97706" font-size="11" font-weight="bold">d = 100 m</text>
-            <!-- time -->
-            <text x="127" y="70" text-anchor="middle" fill="#6b7280" font-size="10">t = 10 s</text>
-            <text x="127" y="82" text-anchor="middle" fill="#d97706" font-size="11" font-weight="bold">v = 10 m/s = 36 km/h</text>
+            <text x="127" y="28" text-anchor="middle" fill="#d97706" font-size="11" font-weight="bold">d</text>
+            <text x="127" y="68" text-anchor="middle" fill="#6b7280" font-size="9">t = temps</text>
+            <text x="127" y="80" text-anchor="middle" fill="#d97706" font-size="10" font-weight="bold">v = d / t</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>Une voiture parcourt <strong>150 km</strong> en <strong>2 h</strong> :</p>
-          <p>\(v = \frac{150}{2} = \mathbf{75 \, km/h}\)</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>Voiture : 150 km en 2h → v = <strong>75 km/h = 20,8 m/s</strong></p>
+          <p>Son dans l'air : v≈340 m/s → en 1s : d = <strong>340 m</strong></p>
         </div>
       </div>
 
       <div class="formula-card">
         <div class="formula-tag phys-tag-sm">Électricité</div>
-        <h3 class="formula-name">Loi d'Ohm</h3>
+        <h3 class="formula-name">Loi d'Ohm & Circuits</h3>
         <div class="formula-box phys-box">
           <div class="formula-display">\( U = R \times I \)</div>
-          <div class="formula-display">\( P = U \times I = R \times I^2 \)</div>
+          <div class="formula-display">\( P = U \times I = R I^2 = \dfrac{U^2}{R} \)</div>
+          <div class="formula-display">\( \text{Série :} R_\text{tot} = R_1+R_2+\cdots \)</div>
+          <div class="formula-display">\( \text{Parallèle :} \dfrac{1}{R_\text{tot}} = \dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots \)</div>
+          <div class="formula-display">\( E = P \times t \quad\text{(énergie en J = W·s)} \)</div>
         </div>
-        <p class="formula-desc">U = tension (V), R = résistance (Ω), I = intensité (A), P = puissance (W)</p>
         <div class="schema-container">
-          <svg viewBox="0 0 300 100" class="schema-svg">
-            <!-- Circuit simplifié -->
-            <rect x="60" y="30" width="180" height="50" rx="8" fill="none" stroke="#9ca3af" stroke-width="2"/>
-            <!-- Batterie -->
-            <rect x="40" y="40" width="8" height="30" rx="2" fill="#fbbf24"/>
-            <rect x="52" y="45" width="5" height="20" rx="1" fill="#9ca3af"/>
-            <!-- Resistor zigzag -->
-            <path d="M 120,55 l 10,0 l 5,-10 l 10,10 l 10,-10 l 10,10 l 5,-10 l 10,0" fill="none" stroke="#ef4444" stroke-width="2.5"/>
-            <text x="175" y="50" fill="#ef4444" font-size="10">R (Ω)</text>
-            <!-- Labels -->
-            <text x="75" y="90" fill="#fbbf24" font-size="10" font-weight="bold">U (V)</text>
-            <text x="240" y="55" fill="#3b82f6" font-size="10" font-weight="bold">I →</text>
-            <text x="150" y="95" text-anchor="middle" fill="#374151" font-size="10">U = R × I</text>
+          <svg viewBox="0 0 300 95" class="schema-svg">
+            <rect x="55" y="25" width="190" height="50" rx="8" fill="none" stroke="#9ca3af" stroke-width="2"/>
+            <rect x="38" y="35" width="8" height="30" rx="2" fill="#fbbf24"/>
+            <rect x="50" y="40" width="5" height="20" rx="1" fill="#9ca3af"/>
+            <path d="M 120,50 l 10,0 l 5,-10 l 10,10 l 10,-10 l 10,10 l 5,-10 l 10,0" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+            <text x="190" y="48" fill="#ef4444" font-size="9">R (Ω)</text>
+            <text x="70" y="87" fill="#fbbf24" font-size="9" font-weight="bold">U (V)</text>
+            <text x="245" y="50" fill="#3b82f6" font-size="9" font-weight="bold">I →</text>
+            <text x="155" y="88" text-anchor="middle" fill="#374151" font-size="9">U = R × I</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>Une résistance de <strong>100 Ω</strong> sous une tension de <strong>12 V</strong> :</p>
-          <p>\(I = \frac{U}{R} = \frac{12}{100} = \mathbf{0,12 \, A = 120 \, mA}\)</p>
-          <p>Puissance : \(P = 12 \times 0,12 = \mathbf{1,44 \, W}\)</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>R=100Ω, U=12V → I=0,12A, P=<strong>1,44W</strong></p>
+          <p>Ampoule 60W sous 230V : I=60/230≈<strong>0,26A</strong></p>
         </div>
       </div>
+
+      <div class="formula-card">
+        <div class="formula-tag phys-tag-sm">Optique</div>
+        <h3 class="formula-name">Optique géométrique</h3>
+        <div class="formula-box phys-box">
+          <div class="formula-display">\( n_1\sin\theta_1 = n_2\sin\theta_2 \quad\text{(Snell-Descartes)} \)</div>
+          <div class="formula-display">\( n = \dfrac{c}{v} \quad\text{(indice de réfraction)} \)</div>
+          <div class="formula-display">\( \dfrac{1}{f} = \dfrac{1}{d_o} + \dfrac{1}{d_i} \quad\text{(lentille mince)} \)</div>
+          <div class="formula-display">\( G = \dfrac{d_i}{d_o} = \dfrac{h_i}{h_o} \quad\text{(grandissement)} \)</div>
+        </div>
+        <div class="schema-container">
+          <svg viewBox="0 0 300 110" class="schema-svg">
+            <line x1="20" y1="55" x2="280" y2="55" stroke="#9ca3af" stroke-width="1"/>
+            <line x1="150" y1="10" x2="150" y2="100" stroke="#9ca3af" stroke-width="1"/>
+            <!-- Lentille -->
+            <path d="M 148,15 Q 135,55 148,95 Q 165,55 148,15" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+            <!-- Rayon incident -->
+            <line x1="30" y1="30" x2="150" y2="30" stroke="#f59e0b" stroke-width="2"/>
+            <!-- Rayon après lentille vers foyer -->
+            <line x1="150" y1="30" x2="210" y2="55" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="150" y1="55" x2="210" y2="55" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,2"/>
+            <circle cx="210" cy="55" r="4" fill="#ef4444"/>
+            <text x="215" y="52" fill="#ef4444" font-size="9" font-weight="bold">F'</text>
+            <text x="155" y="105" text-anchor="middle" fill="#9ca3af" font-size="8">Lentille convergente (f>0)</text>
+            <!-- n1, n2 labels -->
+            <text x="60" y="42" fill="#fbbf24" font-size="9">Rayon incident</text>
+            <text x="220" y="42" fill="#fbbf24" font-size="9">Rayon réfracté</text>
+          </svg>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>Verre (n=1,5) : \(\sin\theta_2=\frac{\sin 30°}{1{,}5}=\frac{0{,}5}{1{,}5}\) → θ₂≈<strong>19,5°</strong></p>
+          <p>Lunette f=10cm, objet à 30cm : \(\frac{1}{d_i}=\frac{1}{10}-\frac{1}{30}=\frac{1}{15}\) → image à <strong>15cm</strong></p>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- Niveau Lycée -->
+  <!-- LYCÉE -->
   <div class="level-block">
-    <div class="level-badge badge-orange">🟠 Niveau Lycée</div>
-
+    <div class="level-badge badge-orange">🟠 Lycée</div>
     <div class="formula-grid">
+
       <div class="formula-card">
         <div class="formula-tag phys-tag-sm">Mécanique de Newton</div>
         <h3 class="formula-name">Les 3 Lois de Newton</h3>
         <div class="formula-box phys-box">
-          <div class="formula-display">\( \vec{F} = m \times \vec{a} \)</div>
-          <div class="formula-display">\( \vec{F}_{A \to B} = -\vec{F}_{B \to A} \)</div>
-          <div class="formula-display">\( P = m \times g \quad (g \approx 9{,}81 \, m/s^2) \)</div>
+          <div class="formula-display">\( \vec{F}_\text{nette}=m\vec{a} \quad\text{(2e loi)} \)</div>
+          <div class="formula-display">\( \text{Si }\vec{F}_\text{nette}=\vec{0}\text{ : mouvement rectiligne uniforme (1e loi)} \)</div>
+          <div class="formula-display">\( \vec{F}_{A\to B}=-\vec{F}_{B\to A} \quad\text{(3e loi, action-réaction)} \)</div>
+          <div class="formula-display">\( P = mg,\quad g\approx9{,}81\text{ m/s}^2 \)</div>
+          <div class="formula-display">\( F_\text{gravit.}=G\dfrac{m_1 m_2}{r^2},\quad G=6{,}674\times10^{-11} \)</div>
         </div>
-        <p class="formula-desc"><strong>1re loi</strong> : inertie. <strong>2e loi</strong> : F=ma. <strong>3e loi</strong> : action-réaction. Ces lois décrivent tout mouvement dans la vie quotidienne.</p>
         <div class="schema-container">
           <svg viewBox="0 0 300 110" class="schema-svg">
-            <!-- Objet -->
-            <rect x="110" y="55" width="80" height="40" rx="8" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
-            <text x="150" y="80" text-anchor="middle" fill="#1e40af" font-size="13" font-weight="bold">m = 5 kg</text>
-            <!-- Force F -->
-            <line x1="190" y1="75" x2="250" y2="75" stroke="#ef4444" stroke-width="3"/>
-            <polygon points="250,69 265,75 250,81" fill="#ef4444"/>
-            <text x="258" y="70" fill="#ef4444" font-size="11" font-weight="bold">F = 20 N</text>
-            <!-- Résultat a -->
-            <text x="258" y="85" fill="#ef4444" font-size="10">a = 4 m/s²</text>
-            <!-- Poids -->
-            <line x1="150" y1="95" x2="150" y2="125" stroke="#7c3aed" stroke-width="2.5"/>
-            <polygon points="144,125 150,138 156,125" fill="#7c3aed"/>
-            <text x="165" y="118" fill="#7c3aed" font-size="10" font-weight="bold">P = mg</text>
-            <!-- Normal -->
-            <line x1="150" y1="55" x2="150" y2="25" stroke="#22c55e" stroke-width="2.5"/>
-            <polygon points="144,25 150,12 156,25" fill="#22c55e"/>
-            <text x="160" y="22" fill="#22c55e" font-size="10" font-weight="bold">N (normale)</text>
+            <rect x="100" y="50" width="100" height="45" rx="8" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+            <text x="150" y="77" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="bold">m = 5 kg</text>
+            <line x1="200" y1="72" x2="255" y2="72" stroke="#ef4444" stroke-width="3"/>
+            <polygon points="255,66 270,72 255,78" fill="#ef4444"/>
+            <text x="265" y="67" fill="#ef4444" font-size="9" font-weight="bold">F=20N</text>
+            <text x="265" y="80" fill="#ef4444" font-size="9">a=4m/s²</text>
+            <line x1="150" y1="95" x2="150" y2="128" stroke="#7c3aed" stroke-width="2.5"/>
+            <polygon points="144,128 150,136 156,128" fill="#7c3aed"/>
+            <text x="163" y="118" fill="#7c3aed" font-size="9" font-weight="bold">P=mg↓</text>
+            <line x1="150" y1="50" x2="150" y2="18" stroke="#22c55e" stroke-width="2.5"/>
+            <polygon points="144,18 150,10 156,18" fill="#22c55e"/>
+            <text x="160" y="20" fill="#22c55e" font-size="9" font-weight="bold">N↑</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>Un objet de <strong>5 kg</strong> soumis à une force de <strong>20 N</strong> :</p>
-          <p>\(a = \frac{F}{m} = \frac{20}{5} = \mathbf{4 \, m/s^2}\)</p>
-          <p>Son poids : \(P = 5 \times 9.81 = \mathbf{49.05 \, N}\)</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>5kg, F=20N → a = 20/5 = <strong>4 m/s²</strong></p>
+          <p>Chute libre : a = g = 9,81 m/s² (seule la gravité agit)</p>
+          <p>Lune-Terre : \(F=6{,}674\times10^{-11}\times\frac{5{,}97\times10^{24}\times7{,}35\times10^{22}}{(3{,}84\times10^8)^2}\approx2\times10^{20}\text{ N}\)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag phys-tag-sm">Cinématique</div>
+        <h3 class="formula-name">Mouvement uniformément accéléré</h3>
+        <div class="formula-box phys-box">
+          <div class="formula-display">\( v(t) = v_0 + at \)</div>
+          <div class="formula-display">\( x(t) = x_0 + v_0 t + \dfrac{1}{2}at^2 \)</div>
+          <div class="formula-display">\( v^2 = v_0^2 + 2a(x-x_0) \)</div>
+          <div class="formula-display">\( \text{Chute libre : } h = \dfrac{1}{2}gt^2 \quad(v_0=0) \)</div>
+          <div class="formula-display">\( \text{Portée projectile : } R = \dfrac{v_0^2\sin 2\theta}{g} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>Chute libre h=80m : \(t=\sqrt{2\times80/9{,}81}\approx\mathbf{4{,}04\text{ s}}\)</p>
+          <p>Vitesse à l'impact : \(v=9{,}81\times4{,}04\approx\mathbf{39{,}6\text{ m/s}}\)</p>
+          <p>Meilleure portée projectile : θ=45° → R=v₀²/g</p>
         </div>
       </div>
 
       <div class="formula-card">
         <div class="formula-tag phys-tag-sm">Énergie</div>
-        <h3 class="formula-name">Énergie & Travail</h3>
+        <h3 class="formula-name">Énergies & Travail</h3>
         <div class="formula-box phys-box">
-          <div class="formula-display">\( E_c = \frac{1}{2}mv^2 \)</div>
-          <div class="formula-display">\( E_p = mgh \)</div>
-          <div class="formula-display">\( W = F \cdot d \cdot \cos\theta \)</div>
-          <div class="formula-display">\( E_{méca} = E_c + E_p = \text{cste} \)</div>
+          <div class="formula-display">\( E_c = \dfrac{1}{2}mv^2 \quad\text{(cinétique)} \)</div>
+          <div class="formula-display">\( E_p = mgh \quad\text{(potentielle de pesanteur)} \)</div>
+          <div class="formula-display">\( E_p^\text{élast.} = \dfrac{1}{2}kx^2 \quad\text{(ressort)} \)</div>
+          <div class="formula-display">\( W = \vec{F}\cdot\vec{d} = Fd\cos\theta \)</div>
+          <div class="formula-display">\( E_\text{mec} = E_c + E_p = \text{cste (sans frottements)} \)</div>
+          <div class="formula-display">\( \mathcal{P} = \dfrac{W}{t} = \vec{F}\cdot\vec{v} \quad\text{(puissance, W)} \)</div>
         </div>
-        <p class="formula-desc">La conservation de l'énergie mécanique : en l'absence de frottements, la somme Ec+Ep reste constante.</p>
         <div class="example-block">
-          <div class="example-title">💡 Exemple — La montagne russe</div>
-          <p>En haut (v=0, h=20 m) : \(E_p = 50 \times 9.81 \times 20 = 9810 \, J\)</p>
-          <p>En bas (h=0) : toute l'énergie devient cinétique</p>
-          <p>\(v = \sqrt{\frac{2 \times 9810}{50}} = \sqrt{392} \approx \mathbf{19{,}8 \, m/s}\)</p>
+          <div class="example-title">💡 Montagne russe</div>
+          <p>En haut h=20m, v=0 → Ep=50×9,81×20=<strong>9810 J</strong></p>
+          <p>En bas h=0 → Ec=9810J → v=√(2×9810/50)≈<strong>19,8 m/s</strong></p>
         </div>
       </div>
 
@@ -605,511 +972,644 @@
         <div class="formula-tag phys-tag-sm">Thermodynamique</div>
         <h3 class="formula-name">Gaz parfaits & Chaleur</h3>
         <div class="formula-box phys-box">
-          <div class="formula-display">\( PV = nRT \)</div>
-          <div class="formula-display">\( Q = mc\Delta T \)</div>
-        </div>
-        <p class="formula-desc">P=pression (Pa), V=volume (m³), n=moles, R=8,314 J/mol·K, T=température (K). Q=chaleur, c=capacité calorifique.</p>
-        <div class="schema-container">
-          <svg viewBox="0 0 300 110" class="schema-svg">
-            <!-- Cylindre piston -->
-            <rect x="60" y="25" width="120" height="70" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
-            <!-- Piston -->
-            <rect x="80" y="30" width="80" height="15" rx="3" fill="#d97706" opacity="0.8"/>
-            <!-- Gaz molecules -->
-            <circle cx="100" cy="75" r="4" fill="#ef4444" opacity="0.7"/>
-            <circle cx="130" cy="60" r="4" fill="#ef4444" opacity="0.7"/>
-            <circle cx="155" cy="80" r="4" fill="#ef4444" opacity="0.7"/>
-            <circle cx="115" cy="85" r="4" fill="#ef4444" opacity="0.7"/>
-            <circle cx="143" cy="65" r="4" fill="#ef4444" opacity="0.7"/>
-            <!-- Labels -->
-            <text x="120" y="20" text-anchor="middle" fill="#d97706" font-size="10">Piston (Pression P)</text>
-            <text x="200" y="50" fill="#374151" font-size="10">PV = nRT</text>
-            <text x="200" y="65" fill="#9ca3af" font-size="9">n = nb moles</text>
-            <text x="200" y="78" fill="#9ca3af" font-size="9">T en Kelvin</text>
-            <text x="200" y="91" fill="#9ca3af" font-size="9">R = 8,314 J/mol·K</text>
-            <!-- Flame -->
-            <text x="120" y="105" text-anchor="middle" fill="#ef4444" font-size="16">🔥</text>
-          </svg>
+          <div class="formula-display">\( PV = nRT \quad (R=8{,}314\text{ J/mol·K}) \)</div>
+          <div class="formula-display">\( T(\text{K}) = T(°\text{C})+273{,}15 \)</div>
+          <div class="formula-display">\( Q = mc\Delta T \quad\text{(chaleur sensible)} \)</div>
+          <div class="formula-display">\( Q = mL \quad\text{(chaleur latente)} \)</div>
+          <div class="formula-display">\( \Delta U = Q + W \quad\text{(1er principe)} \)</div>
+          <div class="formula-display">\( \eta = \dfrac{T_c-T_f}{T_c} \leq 1 \quad\text{(rendement Carnot)} \)</div>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>Eau (c = 4186 J/kg·K), chauffer <strong>500 g</strong> de <strong>20°C à 100°C</strong> :</p>
-          <p>\(Q = 0.5 \times 4186 \times 80 = \mathbf{167440 \, J \approx 167 \, kJ}\)</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>Chauffer 500g d'eau 20°→100°C : Q=0,5×4186×80=<strong>167 kJ</strong></p>
+          <p>Faire fondre 1kg de glace : Q=1×334000=<strong>334 kJ</strong></p>
         </div>
       </div>
 
       <div class="formula-card">
-        <div class="formula-tag phys-tag-sm">Relativité</div>
-        <h3 class="formula-name">Einstein & Relativité</h3>
+        <div class="formula-tag phys-tag-sm">Électromagnétisme</div>
+        <h3 class="formula-name">Électrostatique & Magnétisme</h3>
         <div class="formula-box phys-box">
-          <div class="formula-display">\( E = mc^2 \)</div>
-          <div class="formula-display">\( c = 3 \times 10^8 \, m/s \)</div>
+          <div class="formula-display">\( F=k\dfrac{q_1 q_2}{r^2},\quad k=9\times10^9\text{ N·m}^2/\text{C}^2 \)</div>
+          <div class="formula-display">\( E=\dfrac{F}{q}=k\dfrac{Q}{r^2} \quad\text{(champ électrique)} \)</div>
+          <div class="formula-display">\( U=\dfrac{W_{A\to B}}{q} \quad\text{(tension)} \)</div>
+          <div class="formula-display">\( \vec{F}=q(\vec{v}\times\vec{B}) \quad\text{(force de Lorentz)} \)</div>
+          <div class="formula-display">\( \Phi=\vec{B}\cdot\vec{A}=BA\cos\theta \quad\text{(flux)} \)</div>
+          <div class="formula-display">\( e=-\dfrac{d\Phi}{dt} \quad\text{(induction Faraday)} \)</div>
         </div>
-        <p class="formula-desc">La formule la plus célèbre de la physique : la masse et l'énergie sont équivalentes. Une petite masse correspond à une énergie colossale.</p>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>Conversion de <strong>1 gramme</strong> de matière :</p>
-          <p>\(E = 0.001 \times (3 \times 10^8)^2 = 9 \times 10^{13} \, J\)</p>
-          <p>Soit l'équivalent de <strong>~21 mégatonnes TNT</strong> !</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>Force Coulomb entre 2e⁻ à 1Å : F=k×(1,6×10⁻¹⁹)²/(10⁻¹⁰)²≈<strong>23 nN</strong></p>
+          <p>IRM : champ B=3T, proton → force de Lorentz pour l'imagerie</p>
         </div>
       </div>
 
       <div class="formula-card">
-        <div class="formula-tag phys-tag-sm">Ondes</div>
-        <h3 class="formula-name">Ondes & Lumière</h3>
+        <div class="formula-tag phys-tag-sm">Ondes & Acoustique</div>
+        <h3 class="formula-name">Ondes — Propriétés</h3>
         <div class="formula-box phys-box">
-          <div class="formula-display">\( v = \lambda \times f \)</div>
-          <div class="formula-display">\( T = \frac{1}{f} \)</div>
-          <div class="formula-display">\( E = hf = \frac{hc}{\lambda} \)</div>
+          <div class="formula-display">\( v = \lambda f \)</div>
+          <div class="formula-display">\( T = \dfrac{1}{f} \)</div>
+          <div class="formula-display">\( E_\text{photon} = hf = \dfrac{hc}{\lambda} \)</div>
+          <div class="formula-display">\( f_\text{observé} = f_0\dfrac{v\pm v_\text{obs}}{v\mp v_\text{source}} \quad\text{(Doppler)} \)</div>
+          <div class="formula-display">\( L = 10\log\!\left(\dfrac{I}{I_0}\right)\text{ dB},\quad I_0=10^{-12}\text{ W/m}^2 \)</div>
         </div>
-        <p class="formula-desc">λ=longueur d'onde (m), f=fréquence (Hz), T=période (s), h=6,63×10⁻³⁴ J·s (constante de Planck)</p>
         <div class="schema-container">
-          <svg viewBox="0 0 300 100" class="schema-svg">
-            <defs>
-              <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#ef4444"/>
-                <stop offset="25%" stop-color="#f97316"/>
-                <stop offset="50%" stop-color="#22c55e"/>
-                <stop offset="75%" stop-color="#3b82f6"/>
-                <stop offset="100%" stop-color="#8b5cf6"/>
-              </linearGradient>
-            </defs>
-            <path d="M 20,50 C 40,20 60,80 80,50 C 100,20 120,80 140,50 C 160,20 180,80 200,50 C 220,20 240,80 260,50" fill="none" stroke="url(#waveGrad)" stroke-width="3"/>
-            <line x1="80" y1="15" x2="80" y2="85" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3"/>
-            <line x1="140" y1="15" x2="140" y2="85" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3"/>
-            <!-- Lambda arrow -->
-            <line x1="80" y1="88" x2="140" y2="88" stroke="#374151" stroke-width="1.5"/>
-            <polygon points="140,84 148,88 140,92" fill="#374151"/>
-            <text x="110" y="100" text-anchor="middle" fill="#374151" font-size="11" font-weight="bold">λ</text>
-            <!-- Amplitude -->
-            <line x1="15" y1="20" x2="15" y2="50" stroke="#9ca3af" stroke-width="1.5"/>
-            <text x="8" y="38" fill="#9ca3af" font-size="9">A</text>
-            <!-- Spectrum label -->
-            <text x="260" y="30" fill="#9ca3af" font-size="8">visible</text>
-            <text x="255" y="42" fill="#9ca3af" font-size="8">400–700 nm</text>
+          <svg viewBox="0 0 300 90" class="schema-svg">
+            <defs><linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ef4444"/><stop offset="25%" stop-color="#f97316"/><stop offset="50%" stop-color="#22c55e"/><stop offset="75%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient></defs>
+            <path d="M 20,45 C 40,15 60,75 80,45 C 100,15 120,75 140,45 C 160,15 180,75 200,45 C 220,15 240,75 260,45" fill="none" stroke="url(#wg)" stroke-width="3"/>
+            <line x1="80" y1="10" x2="80" y2="80" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3"/>
+            <line x1="140" y1="10" x2="140" y2="80" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3,3"/>
+            <line x1="80" y1="83" x2="140" y2="83" stroke="#374151" stroke-width="1.5"/>
+            <polygon points="140,79 148,83 140,87" fill="#374151"/>
+            <text x="110" y="78" text-anchor="middle" fill="#374151" font-size="10" font-weight="bold">λ</text>
+            <text x="10" y="45" fill="#9ca3af" font-size="8">A</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>La lumière verte (λ = 550 nm) :</p>
-          <p>\(f = \frac{c}{\lambda} = \frac{3 \times 10^8}{550 \times 10^{-9}} \approx \mathbf{5{,}45 \times 10^{14} \, Hz}\)</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>Lumière verte λ=550nm : f=c/λ≈<strong>5,45×10¹⁴ Hz</strong></p>
+          <p>Doppler : ambulance à 120km/h (340Hz) → f_obs ≈ <strong>374 Hz</strong> en approche</p>
+          <p>Bruit d'avion 130dB = 10¹³ × I₀</p>
         </div>
       </div>
+
+      <div class="formula-card">
+        <div class="formula-tag phys-tag-sm">Relativité & Quantique</div>
+        <h3 class="formula-name">Einstein, Planck & Physique moderne</h3>
+        <div class="formula-box phys-box">
+          <div class="formula-display">\( E = mc^2 \quad (c=3\times10^8\text{ m/s}) \)</div>
+          <div class="formula-display">\( E = mc^2\gamma,\quad \gamma=\dfrac{1}{\sqrt{1-v^2/c^2}} \)</div>
+          <div class="formula-display">\( E_\text{photon} = hf \quad (h=6{,}626\times10^{-34}\text{ J·s}) \)</div>
+          <div class="formula-display">\( \lambda = \dfrac{h}{mv} \quad\text{(de Broglie)} \)</div>
+          <div class="formula-display">\( \Delta x\,\Delta p \geq \dfrac{\hbar}{2} \quad\text{(incertitude Heisenberg)} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>1g de matière : E=0,001×(3×10⁸)²=<strong>9×10¹³ J</strong> ≈ 21 mégatonnes TNT</p>
+          <p>GPS : correction relativiste de 38 μs/jour sinon erreur de <strong>11 km/jour</strong> !</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag phys-tag-sm">Mécanique des fluides</div>
+        <h3 class="formula-name">Fluides — Statique & Dynamique</h3>
+        <div class="formula-box phys-box">
+          <div class="formula-display">\( P = P_0 + \rho g h \quad\text{(pression hydrostatique)} \)</div>
+          <div class="formula-display">\( F_A = \rho_\text{fluide}\,g\,V_\text{immergé} \quad\text{(Archimède)} \)</div>
+          <div class="formula-display">\( P_1+\tfrac{1}{2}\rho v_1^2+\rho g h_1 = P_2+\tfrac{1}{2}\rho v_2^2+\rho g h_2 \quad\text{(Bernoulli)} \)</div>
+          <div class="formula-display">\( Q = Sv \quad\text{(débit volumique)} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>Archimède : bateaux flottent car F_A=ρ_eau×g×V_immergé > Poids</p>
+          <p>Plongée à 10m : P = 101325 + 1000×9,81×10 ≈ <strong>2 atm</strong></p>
+          <p>Bernoulli : portance des ailes d'avion — vitesse ↑ → pression ↓</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag phys-tag-sm">Électricité avancée</div>
+        <h3 class="formula-name">Condensateur & Bobine</h3>
+        <div class="formula-box phys-box">
+          <div class="formula-display">\( q = C\,u \quad\text{(condensateur)} \)</div>
+          <div class="formula-display">\( i = C\dfrac{du}{dt} \)</div>
+          <div class="formula-display">\( E_C = \dfrac{1}{2}Cu^2 \)</div>
+          <div class="formula-display">\( u = L\dfrac{di}{dt} \quad\text{(bobine)} \)</div>
+          <div class="formula-display">\( E_L = \dfrac{1}{2}Li^2 \)</div>
+          <div class="formula-display">\( f_0 = \dfrac{1}{2\pi\sqrt{LC}} \quad\text{(oscillateur LC)} \)</div>
+          <div class="formula-display">\( Z_C = \dfrac{1}{j\omega C},\quad Z_L = j\omega L \quad\text{(impédances)} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemple — Radio FM</div>
+          <p>Accord sur 100 MHz : \(LC=(2\pi\times10^8)^{-2}\approx2{,}5\times10^{-18}\)</p>
+          <p>Si C=10pF → L≈<strong>0,25 μH</strong></p>
+        </div>
+      </div>
+
     </div>
   </div>
+
 </section>
 
-<!-- ═══════════════════════════════ CHIMIE ═══════════════════════════════ -->
+<!-- ══════════════ CHIMIE ══════════════ -->
 <section id="chimie" class="subject-section chem-section">
   <div class="section-header">
     <div class="section-icon chem-icon">⚗️</div>
     <div>
       <div class="section-tag chem-tag">Matière 03</div>
       <h2 class="section-title chem-title">Chimie</h2>
-      <p class="section-desc">De la structure atomique aux réactions d'oxydo-réduction — la science de la matière</p>
+      <p class="section-desc">Atome · Moles · Acides-Bases · Cinétique · Rédox · Thermochimie · Chimie organique</p>
     </div>
   </div>
 
+  <!-- COLLÈGE -->
   <div class="level-block">
-    <div class="level-badge badge-yellow">🟡 Niveau Collège</div>
+    <div class="level-badge badge-yellow">🟡 Collège</div>
     <div class="formula-grid">
+
       <div class="formula-card">
-        <div class="formula-tag chem-tag-sm">Atome</div>
-        <h3 class="formula-name">Structure de l'atome</h3>
+        <div class="formula-tag chem-tag-sm">Structure atomique</div>
+        <h3 class="formula-name">L'atome — Structure</h3>
         <div class="formula-box chem-box">
           <div class="formula-display">\( A = Z + N \)</div>
           <div class="formula-display">\( \text{Électrons} = Z \text{ (atome neutre)} \)</div>
+          <div class="formula-display">\( \text{Ion : } \text{électrons} = Z - \text{charge} \)</div>
         </div>
-        <p class="formula-desc">A = nombre de masse, Z = numéro atomique (protons), N = neutrons</p>
+        <p class="formula-desc">A = nombre de masse (protons+neutrons), Z = numéro atomique, N = neutrons. La notation est ᴬ_Z X.</p>
         <div class="schema-container">
           <svg viewBox="0 0 280 140" class="schema-svg">
-            <!-- Noyau -->
             <circle cx="140" cy="70" r="28" fill="#fca5a5" stroke="#ef4444" stroke-width="2.5"/>
-            <text x="140" y="66" text-anchor="middle" fill="#7f1d1d" font-size="11" font-weight="bold">Noyau</text>
+            <text x="140" y="66" text-anchor="middle" fill="#7f1d1d" font-size="10" font-weight="bold">Noyau</text>
             <text x="140" y="80" text-anchor="middle" fill="#7f1d1d" font-size="9">p⁺ + n⁰</text>
-            <!-- Electrons orbits -->
-            <ellipse cx="140" cy="70" rx="70" ry="25" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="5,3" transform="rotate(30,140,70)"/>
-            <ellipse cx="140" cy="70" rx="70" ry="25" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="5,3" transform="rotate(-30,140,70)"/>
-            <!-- Electrons -->
-            <circle cx="95" cy="52" r="7" fill="#3b82f6"/>
-            <text x="95" y="56" text-anchor="middle" fill="white" font-size="8" font-weight="bold">e⁻</text>
-            <circle cx="185" cy="88" r="7" fill="#3b82f6"/>
-            <text x="185" y="92" text-anchor="middle" fill="white" font-size="8" font-weight="bold">e⁻</text>
-            <circle cx="77" cy="85" r="7" fill="#3b82f6"/>
-            <text x="77" y="89" text-anchor="middle" fill="white" font-size="8" font-weight="bold">e⁻</text>
-            <!-- Legend -->
-            <circle cx="35" cy="115" r="6" fill="#fca5a5" stroke="#ef4444" stroke-width="1.5"/>
-            <text x="47" y="119" fill="#374151" font-size="9">Proton (p⁺)</text>
-            <circle cx="35" cy="130" r="6" fill="#d1d5db" stroke="#6b7280" stroke-width="1.5"/>
-            <text x="47" y="134" fill="#374151" font-size="9">Neutron (n⁰)</text>
-            <circle cx="170" cy="115" r="6" fill="#3b82f6"/>
-            <text x="182" y="119" fill="#374151" font-size="9">Électron (e⁻)</text>
+            <ellipse cx="140" cy="70" rx="68" ry="24" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="5,3" transform="rotate(30,140,70)"/>
+            <ellipse cx="140" cy="70" rx="68" ry="24" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="5,3" transform="rotate(-30,140,70)"/>
+            <circle cx="92" cy="50" r="7" fill="#3b82f6"/>
+            <text x="92" y="54" text-anchor="middle" fill="white" font-size="7" font-weight="bold">e⁻</text>
+            <circle cx="188" cy="90" r="7" fill="#3b82f6"/>
+            <text x="188" y="94" text-anchor="middle" fill="white" font-size="7" font-weight="bold">e⁻</text>
+            <circle cx="75" cy="83" r="7" fill="#3b82f6"/>
+            <text x="75" y="87" text-anchor="middle" fill="white" font-size="7" font-weight="bold">e⁻</text>
+            <circle cx="35" cy="110" r="6" fill="#fca5a5" stroke="#ef4444" stroke-width="1.5"/>
+            <text x="47" y="114" fill="#374151" font-size="8">Proton (p⁺)</text>
+            <circle cx="35" cy="125" r="6" fill="#d1d5db" stroke="#6b7280" stroke-width="1.5"/>
+            <text x="47" y="129" fill="#374151" font-size="8">Neutron (n⁰)</text>
+            <circle cx="175" cy="110" r="6" fill="#3b82f6"/>
+            <text x="187" y="114" fill="#374151" font-size="8">Électron (e⁻)</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple — Le Carbone</div>
-          <p>¹²C : A=12, Z=6 → N = 12-6 = <strong>6 neutrons</strong>, <strong>6 protons</strong>, <strong>6 électrons</strong></p>
+          <div class="example-title">💡 Exemples</div>
+          <p>¹²C : Z=6, N=6, 6 électrons</p>
+          <p>Na⁺ : Z=11, 10 électrons (perd 1 e⁻)</p>
+          <p>Cl⁻ : Z=17, 18 électrons (gagne 1 e⁻)</p>
         </div>
       </div>
+
+      <div class="formula-card">
+        <div class="formula-tag chem-tag-sm">Tableau périodique</div>
+        <h3 class="formula-name">Configuration électronique</h3>
+        <div class="formula-box chem-box">
+          <div class="formula-display">\( \text{Couches : K(2), L(8), M(18), N(32)} \)</div>
+          <div class="formula-display">\( \text{Règle de Klechkowski : 1s,2s,2p,3s,3p,4s,3d,…} \)</div>
+          <div class="formula-display">\( \text{Valence = électrons de la dernière couche} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>Carbone (Z=6) : 1s² 2s² 2p² → 4 électrons de valence → 4 liaisons</p>
+          <p>Oxygène (Z=8) : 1s² 2s² 2p⁴ → 6 valence → 2 liaisons</p>
+          <p>Sodium (Z=11) : [Ne] 3s¹ → 1 valence → ion Na⁺ stable</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
+  <!-- LYCÉE -->
   <div class="level-block">
-    <div class="level-badge badge-orange">🟠 Niveau Lycée</div>
+    <div class="level-badge badge-orange">🟠 Lycée</div>
     <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-tag chem-tag-sm">Quantités de matière</div>
+        <h3 class="formula-name">Moles & Concentration</h3>
+        <div class="formula-box chem-box">
+          <div class="formula-display">\( n = \dfrac{m}{M} \quad\text{(n en mol, m en g, M en g/mol)} \)</div>
+          <div class="formula-display">\( n = C \times V \quad\text{(C en mol/L, V en L)} \)</div>
+          <div class="formula-display">\( N = n \times N_A,\quad N_A=6{,}022\times10^{23}\text{ mol}^{-1} \)</div>
+          <div class="formula-display">\( n = \dfrac{PV}{RT} \quad\text{(gaz parfait)} \)</div>
+          <div class="formula-display">\( V_m = 22{,}4\text{ L/mol à 0°C et 1 atm} \)</div>
+          <div class="formula-display">\( \rho = \dfrac{m}{V} \quad\text{(masse volumique)} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>Dissoudre 5,85g de NaCl (M=58,5) : n=0,1mol dans 1L → C=<strong>0,1 mol/L</strong></p>
+          <p>0,5mol de CO₂ (M=44) : m=<strong>22g</strong></p>
+          <p>1mol de gaz à 0°C, 1atm : V=<strong>22,4L</strong></p>
+        </div>
+      </div>
+
       <div class="formula-card">
         <div class="formula-tag chem-tag-sm">Acides-Bases</div>
         <h3 class="formula-name">pH & Équilibres acido-basiques</h3>
         <div class="formula-box chem-box">
           <div class="formula-display">\( \text{pH} = -\log[\text{H}_3\text{O}^+] \)</div>
-          <div class="formula-display">\( [\text{H}_3\text{O}^+][\text{OH}^-] = K_e = 10^{-14} \)</div>
+          <div class="formula-display">\( [\text{H}_3\text{O}^+] = 10^{-\text{pH}} \)</div>
+          <div class="formula-display">\( [\text{H}_3\text{O}^+][\text{OH}^-] = K_e = 10^{-14} \text{ à 25°C} \)</div>
+          <div class="formula-display">\( \text{pOH} = -\log[\text{OH}^-],\quad \text{pH}+\text{pOH}=14 \)</div>
           <div class="formula-display">\( \text{pKa} = -\log K_a \)</div>
+          <div class="formula-display">\( \text{Henderson-Hasselbalch : pH} = \text{pKa}+\log\dfrac{[\text{A}^-]}{[\text{AH}]} \)</div>
+          <div class="formula-display">\( \text{Acide fort : pH} = -\log C_a \)</div>
+          <div class="formula-display">\( \text{Base forte : pH} = 14+\log C_b \)</div>
         </div>
-        <p class="formula-desc">Le pH mesure l'acidité d'une solution. pH < 7 : acide, pH = 7 : neutre, pH > 7 : basique.</p>
         <div class="schema-container">
-          <svg viewBox="0 0 300 80" class="schema-svg">
-            <defs>
-              <linearGradient id="phGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#ef4444"/>
-                <stop offset="35%" stop-color="#f97316"/>
-                <stop offset="50%" stop-color="#22c55e"/>
-                <stop offset="65%" stop-color="#3b82f6"/>
-                <stop offset="100%" stop-color="#8b5cf6"/>
-              </linearGradient>
-            </defs>
-            <rect x="20" y="20" width="260" height="22" rx="11" fill="url(#phGrad)"/>
-            <!-- Ticks and labels -->
-            <text x="20" y="58" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="bold">0</text>
-            <text x="46" y="58" text-anchor="middle" fill="#f97316" font-size="9">2</text>
-            <text x="72" y="58" text-anchor="middle" fill="#eab308" font-size="9">4</text>
-            <text x="98" y="58" text-anchor="middle" fill="#84cc16" font-size="9">6</text>
-            <text x="124" y="58" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="bold">7</text>
-            <text x="150" y="58" text-anchor="middle" fill="#06b6d4" font-size="9">8</text>
-            <text x="176" y="58" text-anchor="middle" fill="#3b82f6" font-size="9">10</text>
-            <text x="202" y="58" text-anchor="middle" fill="#6366f1" font-size="9">12</text>
-            <text x="228" y="58" text-anchor="middle" fill="#8b5cf6" font-size="9">13</text>
-            <text x="254" y="58" text-anchor="middle" fill="#a855f7" font-size="9">14</text>
-            <!-- Labels ACIDE / NEUTRE / BASE -->
-            <text x="50" y="75" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="bold">ACIDE</text>
-            <text x="150" y="75" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="bold">NEUTRE</text>
-            <text x="240" y="75" text-anchor="middle" fill="#8b5cf6" font-size="10" font-weight="bold">BASE</text>
-            <!-- Cursor -->
-            <polygon points="46,18 50,8 54,18" fill="#f97316"/>
-            <text x="50" y="7" text-anchor="middle" fill="#f97316" font-size="8">HCl</text>
+          <svg viewBox="0 0 300 78" class="schema-svg">
+            <defs><linearGradient id="phg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ef4444"/><stop offset="35%" stop-color="#f97316"/><stop offset="50%" stop-color="#22c55e"/><stop offset="65%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient></defs>
+            <rect x="20" y="20" width="260" height="22" rx="11" fill="url(#phg)"/>
+            <text x="20"  y="56" text-anchor="middle" fill="#ef4444" font-size="8" font-weight="bold">0</text>
+            <text x="50"  y="56" text-anchor="middle" fill="#f97316" font-size="8">2</text>
+            <text x="76"  y="56" text-anchor="middle" fill="#eab308" font-size="8">4</text>
+            <text x="102" y="56" text-anchor="middle" fill="#84cc16" font-size="8">6</text>
+            <text x="128" y="56" text-anchor="middle" fill="#22c55e" font-size="9" font-weight="bold">7</text>
+            <text x="154" y="56" text-anchor="middle" fill="#06b6d4" font-size="8">8</text>
+            <text x="180" y="56" text-anchor="middle" fill="#3b82f6" font-size="8">10</text>
+            <text x="206" y="56" text-anchor="middle" fill="#6366f1" font-size="8">12</text>
+            <text x="260" y="56" text-anchor="middle" fill="#a855f7" font-size="8">14</text>
+            <text x="54"  y="72" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="bold">ACIDE</text>
+            <text x="150" y="72" text-anchor="middle" fill="#22c55e" font-size="9" font-weight="bold">NEUTRE</text>
+            <text x="238" y="72" text-anchor="middle" fill="#8b5cf6" font-size="9" font-weight="bold">BASE</text>
+            <polygon points="50,18 54,8 58,18" fill="#f97316"/>
+            <text x="54" y="7" text-anchor="middle" fill="#f97316" font-size="7">HCl 0,01M</text>
           </svg>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple</div>
-          <p>Solution avec \([\text{H}_3\text{O}^+] = 10^{-3} \, mol/L\)</p>
-          <p>\(\text{pH} = -\log(10^{-3}) = \mathbf{3}\) → solution acide</p>
-          <p>\([\text{OH}^-] = \frac{10^{-14}}{10^{-3}} = \mathbf{10^{-11} \, mol/L}\)</p>
+          <div class="example-title">💡 Exemples</div>
+          <p>HCl 0,01M (acide fort) : pH=−log(0,01)=<strong>2</strong></p>
+          <p>NaOH 0,01M : pOH=2 → pH=<strong>12</strong></p>
+          <p>Tampon : CH₃COOH/CH₃COO⁻ pKa=4,75 → pH≈4,75 (ratio 1:1)</p>
         </div>
       </div>
 
       <div class="formula-card">
         <div class="formula-tag chem-tag-sm">Stœchiométrie</div>
-        <h3 class="formula-name">Moles & Réactions chimiques</h3>
+        <h3 class="formula-name">Bilan de réaction</h3>
         <div class="formula-box chem-box">
-          <div class="formula-display">\( n = \frac{m}{M} \)</div>
-          <div class="formula-display">\( n = C \times V \)</div>
-          <div class="formula-display">\( N_A = 6{,}022 \times 10^{23} \, mol^{-1} \)</div>
-        </div>
-        <p class="formula-desc">n=quantité de matière (mol), m=masse (g), M=masse molaire (g/mol), C=concentration (mol/L), V=volume (L)</p>
-        <div class="schema-container">
-          <svg viewBox="0 0 300 100" class="schema-svg">
-            <!-- Erlenmeyer -->
-            <path d="M 100,20 L 100,55 L 60,90 L 160,90 L 120,55 L 120,20 Z" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
-            <!-- Liquid -->
-            <path d="M 70,90 L 65,75 L 155,75 L 150,90 Z" fill="#6ee7b7" opacity="0.8"/>
-            <!-- Bubbles -->
-            <circle cx="90" cy="65" r="3" fill="#059669" opacity="0.6"/>
-            <circle cx="115" cy="60" r="4" fill="#059669" opacity="0.5"/>
-            <circle cx="100" cy="70" r="2.5" fill="#059669" opacity="0.7"/>
-            <!-- Labels -->
-            <text x="110" y="15" text-anchor="middle" fill="#374151" font-size="10">Solution</text>
-            <text x="200" y="45" fill="#374151" font-size="10">n = C × V</text>
-            <text x="200" y="58" fill="#9ca3af" font-size="9">C = 0.1 mol/L</text>
-            <text x="200" y="70" fill="#9ca3af" font-size="9">V = 250 mL</text>
-            <text x="200" y="82" fill="#059669" font-size="11" font-weight="bold">n = 0.025 mol</text>
-          </svg>
+          <div class="formula-display">\( a\text{A}+b\text{B}\to c\text{C}+d\text{D} \)</div>
+          <div class="formula-display">\( \dfrac{n_\text{A}}{a}=\dfrac{n_\text{B}}{b}=\dfrac{n_\text{C}}{c}=\xi \quad(\xi=\text{avancement}) \)</div>
+          <div class="formula-display">\( n_i^\text{fin} = n_i^\text{init} \pm \nu_i\,\xi \)</div>
+          <div class="formula-display">\( \text{Rendement} = \dfrac{\xi_\text{réel}}{\xi_\text{max}}\times100\% \)</div>
         </div>
         <div class="example-block">
-          <div class="example-title">💡 Exemple — Dissolution de NaCl</div>
-          <p>Dissoudre <strong>5,85 g</strong> de NaCl (M = 58,5 g/mol) :</p>
-          <p>\(n = \frac{5.85}{58.5} = \mathbf{0.1 \, mol}\) dans 1 L → Concentration = <strong>0,1 mol/L</strong></p>
+          <div class="example-title">💡 Exemple — Combustion méthane</div>
+          <p>\(\text{CH}_4 + 2\text{O}_2 \to \text{CO}_2 + 2\text{H}_2\text{O}\)</p>
+          <p>1 mol CH₄ → 2 mol H₂O = 2×18 = <strong>36g d'eau</strong></p>
         </div>
       </div>
 
       <div class="formula-card">
-        <div class="formula-tag chem-tag-sm">Cinétique</div>
-        <h3 class="formula-name">Vitesse de réaction</h3>
+        <div class="formula-tag chem-tag-sm">Cinétique chimique</div>
+        <h3 class="formula-name">Vitesse de réaction & Cinétique</h3>
         <div class="formula-box chem-box">
           <div class="formula-display">\( v = k[\text{A}]^m[\text{B}]^n \)</div>
-          <div class="formula-display">\( t_{1/2} = \frac{\ln 2}{k} \text{ (ordre 1)} \)</div>
+          <div class="formula-display">\( k = A\,e^{-E_a/RT} \quad\text{(Arrhenius)} \)</div>
+          <div class="formula-display">\( \text{Ordre 1 : }[\text{A}]=[\text{A}]_0 e^{-kt} \)</div>
+          <div class="formula-display">\( t_{1/2} = \dfrac{\ln 2}{k} \quad\text{(ordre 1)} \)</div>
+          <div class="formula-display">\( \text{Ordre 2 : }\dfrac{1}{[\text{A}]}=\dfrac{1}{[\text{A}]_0}+kt \)</div>
         </div>
-        <p class="formula-desc">La vitesse d'une réaction dépend de la constante de vitesse k et des concentrations des réactifs. t₁/₂ est la demi-vie.</p>
         <div class="example-block">
-          <div class="example-title">💡 Exemple — Radioactivité</div>
-          <p>Le Carbone 14 a une demi-vie de <strong>5730 ans</strong>.</p>
-          <p>\(k = \frac{\ln 2}{5730} \approx 1{,}21 \times 10^{-4} \, an^{-1}\)</p>
-          <p>Après 11460 ans → \((\frac{1}{2})^2 = \mathbf{25\%}\) du C14 restant</p>
+          <div class="example-title">💡 Exemple — Carbone 14</div>
+          <p>t₁/₂=5730 ans → k=ln2/5730≈1,21×10⁻⁴ an⁻¹</p>
+          <p>Après 11460 ans (2×t₁/₂) → reste (1/2)²=<strong>25%</strong></p>
+          <p>Règle pratique : +10°C → vitesse × 2 à 3</p>
         </div>
       </div>
 
       <div class="formula-card">
         <div class="formula-tag chem-tag-sm">Oxydo-Réduction</div>
-        <h3 class="formula-name">Réactions Rédox</h3>
+        <h3 class="formula-name">Réactions Rédox & Électrochimie</h3>
         <div class="formula-box chem-box">
-          <div class="formula-display">\( \text{Ox} + n\,e^- \rightleftharpoons \text{Red} \)</div>
+          <div class="formula-display">\( \text{Ox} + ne^- \rightleftharpoons \text{Red} \)</div>
+          <div class="formula-display">\( E = E^\circ - \dfrac{RT}{nF}\ln Q \quad\text{(Nernst)} \)</div>
+          <div class="formula-display">\( E_\text{cell} = E_\text{cathode} - E_\text{anode} \)</div>
           <div class="formula-display">\( \Delta G = -nFE \)</div>
-          <div class="formula-display">\( E = E^\circ - \frac{RT}{nF}\ln Q \)</div>
+          <div class="formula-display">\( \Delta G^\circ = -RT\ln K \)</div>
+          <div class="formula-display">\( m = \dfrac{M\,I\,t}{n\,F} \quad\text{(loi de Faraday, électrolyse)} \)</div>
         </div>
-        <p class="formula-desc">Un oxydant capte des électrons (se réduit), un réducteur en cède (s'oxyde). F = 96485 C/mol (constante de Faraday)</p>
         <div class="example-block">
-          <div class="example-title">💡 Exemple — Pile Daniell</div>
-          <p>Zn → Zn²⁺ + 2e⁻ (oxydation, anode)</p>
-          <p>Cu²⁺ + 2e⁻ → Cu (réduction, cathode)</p>
-          <p>E° = E°cathode − E°anode = 0,34 − (−0,76) = <strong>1,10 V</strong></p>
+          <div class="example-title">💡 Pile Daniell</div>
+          <p>Anode : Zn → Zn²⁺ + 2e⁻ (E°=−0,76V)</p>
+          <p>Cathode : Cu²⁺ + 2e⁻ → Cu (E°=+0,34V)</p>
+          <p>E°_cell = 0,34−(−0,76) = <strong>1,10V</strong></p>
         </div>
       </div>
+
+      <div class="formula-card">
+        <div class="formula-tag chem-tag-sm">Thermochimie</div>
+        <h3 class="formula-name">Enthalpie & Énergie des liaisons</h3>
+        <div class="formula-box chem-box">
+          <div class="formula-display">\( \Delta H_\text{réaction} = \sum H_f(\text{produits}) - \sum H_f(\text{réactifs}) \)</div>
+          <div class="formula-display">\( \Delta H = \sum E_\text{liaisons brisées} - \sum E_\text{liaisons formées} \)</div>
+          <div class="formula-display">\( \Delta G = \Delta H - T\Delta S \quad\text{(Gibbs)} \)</div>
+          <div class="formula-display">\( \Delta G < 0 : \text{réaction spontanée} \)</div>
+          <div class="formula-display">\( \Delta G = 0 : \text{équilibre} \)</div>
+          <div class="formula-display">\( K = e^{-\Delta G^\circ/RT} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>Combustion méthane : ΔH≈−890 kJ/mol (exothermique)</p>
+          <p>Photosynthèse : ΔG>0 → nécessite énergie lumineuse</p>
+          <p>Fonte de glace à 0°C : ΔH>0, ΔS>0 → ΔG≈0 (équilibre)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag chem-tag-sm">Chimie organique</div>
+        <h3 class="formula-name">Groupes fonctionnels & Réactions</h3>
+        <div class="formula-box chem-box">
+          <div class="formula-display">\( \text{Alcool : −OH} \)</div>
+          <div class="formula-display">\( \text{Acide carboxylique : −COOH} \)</div>
+          <div class="formula-display">\( \text{Amine : −NH}_2 \)</div>
+          <div class="formula-display">\( \text{Aldéhyde : −CHO} \)</div>
+          <div class="formula-display">\( \text{Cétone : −C(=O)−} \)</div>
+          <div class="formula-display">\( \text{Estérification : RCOOH + R'OH} \rightleftharpoons \text{RCOOR' + H}_2\text{O} \)</div>
+          <div class="formula-display">\( \text{Saponification : RCOOR' + NaOH} \to \text{RCOONa + R'OH} \)</div>
+        </div>
+        <div class="schema-container">
+          <svg viewBox="0 0 300 100" class="schema-svg">
+            <!-- Structure éthanol -->
+            <text x="20" y="30" fill="#374151" font-size="11" font-weight="bold">Éthanol (C₂H₅OH)</text>
+            <text x="20" y="55" fill="#9ca3af" font-size="10">H₃C — CH₂ — OH</text>
+            <circle cx="60" cy="50" r="12" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+            <text x="60" y="54" text-anchor="middle" fill="#065f46" font-size="9">C</text>
+            <line x1="30" y1="50" x2="48" y2="50" stroke="#374151" stroke-width="2"/>
+            <circle cx="100" cy="50" r="12" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+            <text x="100" y="54" text-anchor="middle" fill="#065f46" font-size="9">C</text>
+            <line x1="72" y1="50" x2="88" y2="50" stroke="#374151" stroke-width="2"/>
+            <circle cx="140" cy="50" r="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+            <text x="140" y="54" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold">OH</text>
+            <line x1="112" y1="50" x2="128" y2="50" stroke="#374151" stroke-width="2"/>
+            <text x="170" y="40" fill="#9ca3af" font-size="8">↑ groupe</text>
+            <text x="170" y="52" fill="#d97706" font-size="9" font-weight="bold">−OH alcool</text>
+            <text x="20" y="80" fill="#9ca3af" font-size="8">Oxydation : alcool → aldéhyde → acide</text>
+            <text x="20" y="93" fill="#9ca3af" font-size="8">Réduction : aldéhyde → alcool</text>
+          </svg>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Exemples</div>
+          <p>Aspirine = acide acétylsalicylique (ester + acide)</p>
+          <p>Savon = sel d'acide gras (saponification huile + NaOH)</p>
+          <p>Nylon = polyamide (condensation amine + acide)</p>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-tag chem-tag-sm">Équilibres chimiques</div>
+        <h3 class="formula-name">Constante d'équilibre & Le Chatelier</h3>
+        <div class="formula-box chem-box">
+          <div class="formula-display">\( K_c = \dfrac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b} \)</div>
+          <div class="formula-display">\( K_p = K_c(RT)^{\Delta n} \)</div>
+          <div class="formula-display">\( Q < K : \text{réaction dans le sens direct} \)</div>
+          <div class="formula-display">\( Q > K : \text{réaction dans le sens inverse} \)</div>
+          <div class="formula-display">\( \text{Principe de Le Chatelier : toute perturbation} \)</div>
+          <div class="formula-display">\( \text{est compensée par le système} \end{equation} \)</div>
+        </div>
+        <div class="example-block">
+          <div class="example-title">💡 Haber-Bosch (synthèse NH₃)</div>
+          <p>N₂ + 3H₂ ⇌ 2NH₃ (ΔH<0)</p>
+          <p>Pression ↑ → équilibre vers NH₃ (côté moins de moles)</p>
+          <p>Température ↑ → déplace vers gauche (sens endothermique)</p>
+          <p>Compromis industriel : 450°C, 200 atm, catalyseur Fe</p>
+        </div>
+      </div>
+
     </div>
   </div>
+
 </section>
 
-<!-- ═══════════════════════════════ EXERCICES ═══════════════════════════════ -->
+<!-- ══════════════ EXERCICES ══════════════ -->
 <section id="exercices" class="exercises-section">
   <div class="section-header">
     <div class="section-icon ex-icon">✏️</div>
     <div>
       <div class="section-tag ex-tag">Pratique</div>
       <h2 class="section-title ex-title">Exercices Corrigés</h2>
-      <p class="section-desc">Teste tes connaissances — clique sur "Voir la solution" pour chaque exercice</p>
+      <p class="section-desc">Clique sur "Voir la solution" pour chaque exercice — solutions détaillées étape par étape</p>
     </div>
   </div>
 
   <div class="exercises-grid">
 
-    <!-- Exercice 1 -->
     <div class="exercise-card" data-level="primaire" data-subject="maths">
-      <div class="ex-header">
-        <span class="ex-badge badge-green">🟢 Primaire</span>
-        <span class="ex-subject">Mathématiques</span>
-      </div>
-      <h3 class="ex-title-card">Problème de partage</h3>
-      <p class="ex-statement">Marie a <strong>48 bonbons</strong>. Elle veut les partager équitablement entre <strong>6 amis</strong>. Combien chaque ami reçoit-il de bonbons ? Si elle en mange 5 avant de partager, combien reste-t-il par personne ?</p>
+      <div class="ex-header"><span class="ex-badge badge-green">🟢 Primaire</span><span class="ex-subject">Mathématiques</span></div>
+      <h3 class="ex-title-card">Fractions et partage</h3>
+      <p class="ex-statement">Marie a <strong>48 bonbons</strong>. Elle en donne <strong>1/3</strong> à son frère et <strong>1/4</strong> à sa sœur. Combien lui en reste-t-il ?</p>
       <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
       <div class="solution-block hidden">
-        <div class="solution-step">
-          <span class="step-num">①</span>
-          <span>48 ÷ 6 = <strong>8 bonbons</strong> par ami</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">②</span>
-          <span>48 − 5 = 43 bonbons restants</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">③</span>
-          <span>43 ÷ 6 = 7,16... → pas de partage exact ! 7 bonbons chacun + <strong>1 restant</strong></span>
-        </div>
-        <div class="solution-answer">✅ Réponse : 7 bonbons par personne, 1 en reste</div>
+        <div class="solution-step"><span class="step-num">①</span><span>Frère : \(\frac{1}{3}\times48=16\) bonbons</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>Sœur : \(\frac{1}{4}\times48=12\) bonbons</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>Total donné : 16+12=28</span></div>
+        <div class="solution-step"><span class="step-num">④</span><span>Restant : 48−28=<strong>20 bonbons</strong></span></div>
+        <div class="solution-answer">✅ Il reste <strong>20 bonbons</strong> à Marie</div>
       </div>
     </div>
 
-    <!-- Exercice 2 -->
+    <div class="exercise-card" data-level="primaire" data-subject="maths">
+      <div class="ex-header"><span class="ex-badge badge-green">🟢 Primaire</span><span class="ex-subject">Géométrie</span></div>
+      <h3 class="ex-title-card">Aire d'une pièce</h3>
+      <p class="ex-statement">Une pièce rectangulaire mesure <strong>4,5 m × 3,2 m</strong>. Quel est le coût de la pose de carrelage à <strong>35 €/m²</strong> ?</p>
+      <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
+      <div class="solution-block hidden">
+        <div class="solution-step"><span class="step-num">①</span><span>Aire = 4,5 × 3,2 = <strong>14,4 m²</strong></span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>Coût = 14,4 × 35 = <strong>504 €</strong></span></div>
+        <div class="solution-answer">✅ Le carrelage coûtera <strong>504 €</strong></div>
+      </div>
+    </div>
+
     <div class="exercise-card" data-level="college" data-subject="maths">
-      <div class="ex-header">
-        <span class="ex-badge badge-yellow">🟡 Collège</span>
-        <span class="ex-subject">Mathématiques</span>
-      </div>
-      <h3 class="ex-title-card">Triangle et Pythagore</h3>
-      <p class="ex-statement">Un triangle a deux côtés de <strong>5 cm</strong> et <strong>12 cm</strong>. Est-ce un triangle rectangle ? Si oui, quelle est la longueur de son hypoténuse ?</p>
+      <div class="ex-header"><span class="ex-badge badge-yellow">🟡 Collège</span><span class="ex-subject">Mathématiques</span></div>
+      <h3 class="ex-title-card">Pythagore — Échelle</h3>
+      <p class="ex-statement">Une échelle de <strong>5 m</strong> est appuyée contre un mur. Son pied est à <strong>1,5 m</strong> du mur. À quelle hauteur touche-t-elle le mur ?</p>
       <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
       <div class="solution-block hidden">
-        <div class="solution-step">
-          <span class="step-num">①</span>
-          <span>On cherche si \(5^2 + 12^2 = c^2\)</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">②</span>
-          <span>\(25 + 144 = 169 = 13^2\)</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">③</span>
-          <span>Oui ! C'est un triangle rectangle (triplet pythagoricien 5-12-13)</span>
-        </div>
-        <div class="solution-answer">✅ Hypoténuse = <strong>13 cm</strong></div>
+        <div class="solution-step"><span class="step-num">①</span><span>Pythagore : \(h^2 + 1{,}5^2 = 5^2\)</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>\(h^2 = 25 - 2{,}25 = 22{,}75\)</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>\(h = \sqrt{22{,}75} \approx 4{,}77\text{ m}\)</span></div>
+        <div class="solution-answer">✅ L'échelle touche le mur à <strong>≈ 4,77 m</strong> de hauteur</div>
       </div>
     </div>
 
-    <!-- Exercice 3 -->
+    <div class="exercise-card" data-level="college" data-subject="maths">
+      <div class="ex-header"><span class="ex-badge badge-yellow">🟡 Collège</span><span class="ex-subject">Mathématiques</span></div>
+      <h3 class="ex-title-card">Pourcentages — Soldes</h3>
+      <p class="ex-statement">Un article est d'abord réduit de <strong>20%</strong>, puis encore de <strong>15%</strong>. Quel est le taux de réduction total ? (Prix initial : 200 €)</p>
+      <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
+      <div class="solution-block hidden">
+        <div class="solution-step"><span class="step-num">①</span><span>Après −20% : 200 × 0,80 = 160 €</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>Après −15% : 160 × 0,85 = 136 €</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>Taux global : \(\frac{200-136}{200}=\frac{64}{200}=32\%\)</span></div>
+        <div class="solution-step"><span class="step-num">④</span><span>Vérif : \(0{,}80 \times 0{,}85 = 0{,}68\) soit −<strong>32%</strong> (≠ 35% !)</span></div>
+        <div class="solution-answer">✅ Réduction totale = <strong>32%</strong> (et non 35% !)</div>
+      </div>
+    </div>
+
     <div class="exercise-card" data-level="lycee" data-subject="maths">
-      <div class="ex-header">
-        <span class="ex-badge badge-orange">🟠 Lycée</span>
-        <span class="ex-subject">Mathématiques</span>
-      </div>
-      <h3 class="ex-title-card">Équation du 2nd degré</h3>
-      <p class="ex-statement">Résoudre dans ℝ : \(x^2 - 5x + 6 = 0\)</p>
+      <div class="ex-header"><span class="ex-badge badge-orange">🟠 Lycée</span><span class="ex-subject">Mathématiques</span></div>
+      <h3 class="ex-title-card">Suite arithmétique — Économie</h3>
+      <p class="ex-statement">Léo épargne <strong>50 €</strong> le 1er mois et augmente son épargne de <strong>10 €</strong> chaque mois. Quelle somme totale a-t-il épargnée au bout de <strong>12 mois</strong> ?</p>
       <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
       <div class="solution-block hidden">
-        <div class="solution-step">
-          <span class="step-num">①</span>
-          <span>a=1, b=−5, c=6 → \(\Delta = (-5)^2 - 4(1)(6) = 25 - 24 = 1\)</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">②</span>
-          <span>\(x_1 = \frac{5 + 1}{2} = 3\) &nbsp; \(x_2 = \frac{5 - 1}{2} = 2\)</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">③</span>
-          <span>Vérification : \((x-2)(x-3) = x^2 - 5x + 6\) ✓</span>
-        </div>
-        <div class="solution-answer">✅ Solutions : \(x_1 = 3\) et \(x_2 = 2\)</div>
+        <div class="solution-step"><span class="step-num">①</span><span>Suite arithmétique : u₁=50, r=10</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>12e mois : \(u_{12}=50+(12-1)\times10=160€\)</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>Somme : \(S_{12}=\frac{12\times(50+160)}{2}=\frac{12\times210}{2}=1260€\)</span></div>
+        <div class="solution-answer">✅ Léo a épargné <strong>1 260 €</strong> en 12 mois</div>
       </div>
     </div>
 
-    <!-- Exercice 4 -->
-    <div class="exercise-card" data-level="college" data-subject="physique">
-      <div class="ex-header">
-        <span class="ex-badge badge-yellow">🟡 Collège</span>
-        <span class="ex-subject">Physique</span>
-      </div>
-      <h3 class="ex-title-card">Vitesse d'un cycliste</h3>
-      <p class="ex-statement">Un cycliste parcourt <strong>36 km</strong> en <strong>1h30</strong>. Quelle est sa vitesse moyenne en km/h et en m/s ?</p>
+    <div class="exercise-card" data-level="lycee" data-subject="maths">
+      <div class="ex-header"><span class="ex-badge badge-orange">🟠 Lycée</span><span class="ex-subject">Mathématiques</span></div>
+      <h3 class="ex-title-card">Suite géométrique — Intérêts composés</h3>
+      <p class="ex-statement">Un capital de <strong>5 000 €</strong> est placé à <strong>3% par an</strong>. Combien vaut-il après <strong>8 ans</strong> ? Après combien d'années aura-t-il doublé ?</p>
       <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
       <div class="solution-block hidden">
-        <div class="solution-step">
-          <span class="step-num">①</span>
-          <span>t = 1h30 = 1,5 h</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">②</span>
-          <span>\(v = \frac{36}{1.5} = 24 \, km/h\)</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">③</span>
-          <span>Conversion : \(24 \div 3.6 = 6.67 \, m/s\)</span>
-        </div>
+        <div class="solution-step"><span class="step-num">①</span><span>Suite géométrique : u₀=5000, q=1,03</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>Après 8 ans : \(5000\times1{,}03^8=5000\times1{,}2668\approx6334€\)</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>Doublement : \(1{,}03^n=2\) → \(n=\frac{\ln 2}{\ln 1{,}03}\approx23{,}4\)</span></div>
+        <div class="solution-answer">✅ Valeur à 8 ans ≈ <strong>6 334 €</strong> | Double en <strong>≈ 24 ans</strong></div>
+      </div>
+    </div>
+
+    <div class="exercise-card" data-level="lycee" data-subject="maths">
+      <div class="ex-header"><span class="ex-badge badge-orange">🟠 Lycée</span><span class="ex-subject">Mathématiques</span></div>
+      <h3 class="ex-title-card">Équation du 2nd degré</h3>
+      <p class="ex-statement">Résoudre \(x^2 - 5x + 6 = 0\). Trouver ensuite les dimensions d'un rectangle dont le périmètre est 10 et l'aire 6.</p>
+      <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
+      <div class="solution-block hidden">
+        <div class="solution-step"><span class="step-num">①</span><span>\(\Delta = 25-24 = 1 > 0\)</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>\(x_1=3,\; x_2=2\)</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>Rectangle : L+l=5 et L×l=6 → mêmes racines !</span></div>
+        <div class="solution-answer">✅ \(x=3\) ou \(x=2\) | Rectangle <strong>3 cm × 2 cm</strong></div>
+      </div>
+    </div>
+
+    <div class="exercise-card" data-level="college" data-subject="physique">
+      <div class="ex-header"><span class="ex-badge badge-yellow">🟡 Collège</span><span class="ex-subject">Physique</span></div>
+      <h3 class="ex-title-card">Vitesse d'un cycliste</h3>
+      <p class="ex-statement">Un cycliste parcourt <strong>36 km</strong> en <strong>1h30min</strong>. Quelle est sa vitesse en km/h et m/s ?</p>
+      <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
+      <div class="solution-block hidden">
+        <div class="solution-step"><span class="step-num">①</span><span>t = 1h30 = 1,5 h</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>\(v=36/1{,}5=\mathbf{24\text{ km/h}}\)</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>Conversion : \(24\div3{,}6\approx\mathbf{6{,}67\text{ m/s}}\)</span></div>
         <div class="solution-answer">✅ v = <strong>24 km/h = 6,67 m/s</strong></div>
       </div>
     </div>
 
-    <!-- Exercice 5 -->
     <div class="exercise-card" data-level="lycee" data-subject="physique">
-      <div class="ex-header">
-        <span class="ex-badge badge-orange">🟠 Lycée</span>
-        <span class="ex-subject">Physique</span>
-      </div>
-      <h3 class="ex-title-card">Chute libre</h3>
-      <p class="ex-statement">On lâche un objet depuis le haut d'une falaise de <strong>80 m</strong> sans vitesse initiale (g = 9,81 m/s²). Combien de temps met-il pour atteindre le sol ? À quelle vitesse arrive-t-il ?</p>
+      <div class="ex-header"><span class="ex-badge badge-orange">🟠 Lycée</span><span class="ex-subject">Physique</span></div>
+      <h3 class="ex-title-card">Chute libre — Falaise</h3>
+      <p class="ex-statement">On lâche un objet depuis une falaise de <strong>80 m</strong> sans vitesse initiale. Durée de chute et vitesse à l'impact ? (g = 9,81 m/s²)</p>
       <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
       <div class="solution-block hidden">
-        <div class="solution-step">
-          <span class="step-num">①</span>
-          <span>Équation : \(h = \frac{1}{2}gt^2\) → \(t = \sqrt{\frac{2h}{g}}\)</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">②</span>
-          <span>\(t = \sqrt{\frac{2 \times 80}{9.81}} = \sqrt{16.3} \approx 4.04 \, s\)</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">③</span>
-          <span>Vitesse : \(v = g \times t = 9.81 \times 4.04 \approx 39.6 \, m/s \approx 143 \, km/h\)</span>
-        </div>
+        <div class="solution-step"><span class="step-num">①</span><span>\(h=\frac{1}{2}gt^2\Rightarrow t=\sqrt{2h/g}\)</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>\(t=\sqrt{160/9{,}81}\approx\mathbf{4{,}04\text{ s}}\)</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>\(v=gt=9{,}81\times4{,}04\approx\mathbf{39{,}6\text{ m/s}=142\text{ km/h}}\)</span></div>
         <div class="solution-answer">✅ Durée ≈ <strong>4,04 s</strong> | Vitesse ≈ <strong>39,6 m/s</strong></div>
       </div>
     </div>
 
-    <!-- Exercice 6 -->
-    <div class="exercise-card" data-level="lycee" data-subject="chimie">
-      <div class="ex-header">
-        <span class="ex-badge badge-orange">🟠 Lycée</span>
-        <span class="ex-subject">Chimie</span>
-      </div>
-      <h3 class="ex-title-card">Calcul de pH</h3>
-      <p class="ex-statement">On dissout <strong>0,365 g</strong> de HCl (M = 36,5 g/mol) dans <strong>1 litre</strong> d'eau. Calculer le pH de la solution (HCl est un acide fort).</p>
+    <div class="exercise-card" data-level="lycee" data-subject="physique">
+      <div class="ex-header"><span class="ex-badge badge-orange">🟠 Lycée</span><span class="ex-subject">Physique</span></div>
+      <h3 class="ex-title-card">Énergie — Conservation</h3>
+      <p class="ex-statement">Un skieur (70 kg) part du sommet d'une piste de <strong>500 m de dénivelé</strong>. En ignorant les frottements, quelle est sa vitesse en bas ?</p>
       <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
       <div class="solution-block hidden">
-        <div class="solution-step">
-          <span class="step-num">①</span>
-          <span>\(n_{HCl} = \frac{0.365}{36.5} = 0.01 \, mol\)</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">②</span>
-          <span>HCl étant un acide fort : \([\text{H}_3\text{O}^+] = \frac{0.01}{1} = 10^{-2} \, mol/L\)</span>
-        </div>
-        <div class="solution-step">
-          <span class="step-num">③</span>
-          <span>\(\text{pH} = -\log(10^{-2}) = 2\)</span>
-        </div>
-        <div class="solution-answer">✅ pH = <strong>2</strong> → solution fortement acide</div>
+        <div class="solution-step"><span class="step-num">①</span><span>\(E_p=mgh=70\times9{,}81\times500=343350\text{ J}\)</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>Conservation : \(E_p=E_c=\frac{1}{2}mv^2\)</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>\(v=\sqrt{2gh}=\sqrt{2\times9{,}81\times500}\approx99\text{ m/s}=\mathbf{356\text{ km/h}}\)</span></div>
+        <div class="solution-answer">✅ Vitesse théorique ≈ <strong>99 m/s ≈ 356 km/h</strong> (record mondial sans frottements !)</div>
+      </div>
+    </div>
+
+    <div class="exercise-card" data-level="lycee" data-subject="chimie">
+      <div class="ex-header"><span class="ex-badge badge-orange">🟠 Lycée</span><span class="ex-subject">Chimie</span></div>
+      <h3 class="ex-title-card">Calcul de pH — HCl</h3>
+      <p class="ex-statement">Calculer le pH d'une solution d'HCl à <strong>0,01 mol/L</strong>. Puis calculer [OH⁻] et le pOH.</p>
+      <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
+      <div class="solution-block hidden">
+        <div class="solution-step"><span class="step-num">①</span><span>HCl acide fort → [H₃O⁺] = 0,01 = 10⁻² mol/L</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>pH = −log(10⁻²) = <strong>2</strong></span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>[OH⁻] = Ke/[H₃O⁺] = 10⁻¹⁴/10⁻² = 10⁻¹² mol/L</span></div>
+        <div class="solution-step"><span class="step-num">④</span><span>pOH = 12 | Vérif : pH+pOH = 14 ✓</span></div>
+        <div class="solution-answer">✅ pH = <strong>2</strong> | [OH⁻] = 10⁻¹² | pOH = 12</div>
+      </div>
+    </div>
+
+    <div class="exercise-card" data-level="lycee" data-subject="chimie">
+      <div class="ex-header"><span class="ex-badge badge-orange">🟠 Lycée</span><span class="ex-subject">Chimie</span></div>
+      <h3 class="ex-title-card">Stœchiométrie — Combustion</h3>
+      <p class="ex-statement">On brûle <strong>10 g de propane</strong> (C₃H₈, M=44 g/mol). Quelle masse de CO₂ (M=44) et d'eau est produite ? (bilan : C₃H₈ + 5O₂ → 3CO₂ + 4H₂O)</p>
+      <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
+      <div class="solution-block hidden">
+        <div class="solution-step"><span class="step-num">①</span><span>n(C₃H₈) = 10/44 ≈ 0,227 mol</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>n(CO₂) = 3 × 0,227 = 0,681 mol → m = 0,681×44 ≈ <strong>30 g</strong></span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>n(H₂O) = 4 × 0,227 = 0,909 mol → m = 0,909×18 ≈ <strong>16,4 g</strong></span></div>
+        <div class="solution-answer">✅ CO₂ produit ≈ <strong>30 g</strong> | H₂O produite ≈ <strong>16,4 g</strong></div>
+      </div>
+    </div>
+
+    <div class="exercise-card" data-level="lycee" data-subject="maths">
+      <div class="ex-header"><span class="ex-badge badge-orange">🟠 Lycée</span><span class="ex-subject">Probabilités</span></div>
+      <h3 class="ex-title-card">Loi binomiale — QCM</h3>
+      <p class="ex-statement">Un QCM a 10 questions à 4 choix. Un étudiant répond au hasard. Quelle est la probabilité d'avoir exactement <strong>4 bonnes réponses</strong> ?</p>
+      <button class="solution-btn" onclick="toggleSolution(this)">👁 Voir la solution</button>
+      <div class="solution-block hidden">
+        <div class="solution-step"><span class="step-num">①</span><span>Loi binomiale : n=10, p=1/4=0,25, k=4</span></div>
+        <div class="solution-step"><span class="step-num">②</span><span>\(\binom{10}{4}=\frac{10!}{4!\times6!}=210\)</span></div>
+        <div class="solution-step"><span class="step-num">③</span><span>\(P(X=4)=210\times(0{,}25)^4\times(0{,}75)^6\)</span></div>
+        <div class="solution-step"><span class="step-num">④</span><span>\(= 210\times0{,}003906\times0{,}1779\approx\mathbf{0{,}146=14{,}6\%}\)</span></div>
+        <div class="solution-answer">✅ P(4 bonnes) ≈ <strong>14,6%</strong></div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- Tableau récapitulatif des constantes -->
-<section class="constants-section">
+<!-- ══════════════ CONSTANTES ══════════════ -->
+<section id="constantes" class="constants-section">
   <div class="section-header">
     <div class="section-icon const-icon">📐</div>
     <div>
       <div class="section-tag">Référence</div>
-      <h2 class="section-title">Constantes Fondamentales</h2>
+      <h2 class="section-title">Constantes & Unités Fondamentales</h2>
     </div>
   </div>
   <div class="constants-grid">
-    <div class="constant-card">
-      <div class="constant-symbol">c</div>
-      <div class="constant-name">Vitesse de la lumière</div>
-      <div class="constant-value">3 × 10⁸ m/s</div>
-    </div>
-    <div class="constant-card">
-      <div class="constant-symbol">g</div>
-      <div class="constant-name">Pesanteur terrestre</div>
-      <div class="constant-value">9,81 m/s²</div>
-    </div>
-    <div class="constant-card">
-      <div class="constant-symbol">h</div>
-      <div class="constant-name">Constante de Planck</div>
-      <div class="constant-value">6,626 × 10⁻³⁴ J·s</div>
-    </div>
-    <div class="constant-card">
-      <div class="constant-symbol">Nₐ</div>
-      <div class="constant-name">Nombre d'Avogadro</div>
-      <div class="constant-value">6,022 × 10²³ mol⁻¹</div>
-    </div>
-    <div class="constant-card">
-      <div class="constant-symbol">R</div>
-      <div class="constant-name">Constante des gaz</div>
-      <div class="constant-value">8,314 J/mol·K</div>
-    </div>
-    <div class="constant-card">
-      <div class="constant-symbol">F</div>
-      <div class="constant-name">Constante de Faraday</div>
-      <div class="constant-value">96 485 C/mol</div>
-    </div>
-    <div class="constant-card">
-      <div class="constant-symbol">π</div>
-      <div class="constant-name">Pi</div>
-      <div class="constant-value">3,14159265...</div>
-    </div>
-    <div class="constant-card">
-      <div class="constant-symbol">e</div>
-      <div class="constant-name">Nombre d'Euler</div>
-      <div class="constant-value">2,71828182...</div>
+    <div class="constant-card"><div class="constant-symbol">c</div><div class="constant-name">Vitesse de la lumière</div><div class="constant-value">2,998 × 10⁸ m/s</div></div>
+    <div class="constant-card"><div class="constant-symbol">g</div><div class="constant-name">Pesanteur terrestre</div><div class="constant-value">9,806 m/s²</div></div>
+    <div class="constant-card"><div class="constant-symbol">h</div><div class="constant-name">Constante de Planck</div><div class="constant-value">6,626 × 10⁻³⁴ J·s</div></div>
+    <div class="constant-card"><div class="constant-symbol">Nₐ</div><div class="constant-name">Nombre d'Avogadro</div><div class="constant-value">6,022 × 10²³ mol⁻¹</div></div>
+    <div class="constant-card"><div class="constant-symbol">R</div><div class="constant-name">Constante des gaz</div><div class="constant-value">8,314 J/mol·K</div></div>
+    <div class="constant-card"><div class="constant-symbol">F</div><div class="constant-name">Constante de Faraday</div><div class="constant-value">96 485 C/mol</div></div>
+    <div class="constant-card"><div class="constant-symbol">k</div><div class="constant-name">Constante de Boltzmann</div><div class="constant-value">1,381 × 10⁻²³ J/K</div></div>
+    <div class="constant-card"><div class="constant-symbol">G</div><div class="constant-name">Constante de gravitation</div><div class="constant-value">6,674 × 10⁻¹¹ N·m²/kg²</div></div>
+    <div class="constant-card"><div class="constant-symbol">e</div><div class="constant-name">Charge élémentaire</div><div class="constant-value">1,602 × 10⁻¹⁹ C</div></div>
+    <div class="constant-card"><div class="constant-symbol">π</div><div class="constant-name">Pi</div><div class="constant-value">3,14159265358979…</div></div>
+    <div class="constant-card"><div class="constant-symbol">e</div><div class="constant-name">Nombre d'Euler</div><div class="constant-value">2,71828182845904…</div></div>
+    <div class="constant-card"><div class="constant-symbol">φ</div><div class="constant-name">Nombre d'or</div><div class="constant-value">(1+√5)/2 ≈ 1,61803…</div></div>
+    <div class="constant-card"><div class="constant-symbol">ℏ</div><div class="constant-name">h-barre (Dirac)</div><div class="constant-value">1,055 × 10⁻³⁴ J·s</div></div>
+    <div class="constant-card"><div class="constant-symbol">ε₀</div><div class="constant-name">Permittivité du vide</div><div class="constant-value">8,854 × 10⁻¹² F/m</div></div>
+    <div class="constant-card"><div class="constant-symbol">μ₀</div><div class="constant-name">Perméabilité du vide</div><div class="constant-value">4π × 10⁻⁷ H/m</div></div>
+    <div class="constant-card"><div class="constant-symbol">Rₛ</div><div class="constant-name">Rayon de Bohr</div><div class="constant-value">0,529 × 10⁻¹⁰ m</div></div>
+  </div>
+
+  <!-- Préfixes SI -->
+  <div style="margin-top:3rem">
+    <h3 style="font-family:var(--font-head);font-size:1.3rem;color:var(--text);margin-bottom:1rem">Préfixes SI</h3>
+    <div class="constants-grid">
+      <div class="constant-card"><div class="constant-symbol" style="font-size:1.3rem">T</div><div class="constant-name">Téra</div><div class="constant-value">10¹²</div></div>
+      <div class="constant-card"><div class="constant-symbol" style="font-size:1.3rem">G</div><div class="constant-name">Giga</div><div class="constant-value">10⁹</div></div>
+      <div class="constant-card"><div class="constant-symbol" style="font-size:1.3rem">M</div><div class="constant-name">Méga</div><div class="constant-value">10⁶</div></div>
+      <div class="constant-card"><div class="constant-symbol" style="font-size:1.3rem">k</div><div class="constant-name">Kilo</div><div class="constant-value">10³</div></div>
+      <div class="constant-card"><div class="constant-symbol" style="font-size:1.3rem">m</div><div class="constant-name">Milli</div><div class="constant-value">10⁻³</div></div>
+      <div class="constant-card"><div class="constant-symbol" style="font-size:1.3rem">μ</div><div class="constant-name">Micro</div><div class="constant-value">10⁻⁶</div></div>
+      <div class="constant-card"><div class="constant-symbol" style="font-size:1.3rem">n</div><div class="constant-name">Nano</div><div class="constant-value">10⁻⁹</div></div>
+      <div class="constant-card"><div class="constant-symbol" style="font-size:1.3rem">p</div><div class="constant-name">Pico</div><div class="constant-value">10⁻¹²</div></div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- ══════════════ FOOTER ══════════════ -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-logo">⚗️ Formula<span class="logo-accent">X</span></div>
     <p class="footer-text">L'Atlas des Sciences — Librement accessible pour tous les apprenants</p>
     <div class="footer-tags">
       <span class="footer-tag">Mathématiques</span>
+      <span class="footer-tag">Suites & Séries</span>
+      <span class="footer-tag">Probabilités</span>
       <span class="footer-tag">Physique</span>
-      <span class="footer-tag">Chimie</span>
+      <span class="footer-tag">Chimie organique</span>
       <span class="footer-tag">Open Source</span>
     </div>
     <p class="footer-copy">Fait avec ❤️ pour les curieux de tout âge — 2025</p>

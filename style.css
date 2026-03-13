@@ -977,6 +977,31 @@ body {
   .constants-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ─── Highlighted cards (suites) ─── */
+.highlight-card {
+  border-color: rgba(129,140,248,0.35) !important;
+  background: linear-gradient(135deg, var(--surface) 80%, rgba(129,140,248,0.08)) !important;
+  box-shadow: 0 0 0 1px rgba(129,140,248,0.15), inset 0 1px 0 rgba(129,140,248,0.1);
+}
+
+.highlight-card::before {
+  opacity: 1 !important;
+}
+
+.tag-new {
+  background: linear-gradient(135deg, var(--math-glow), rgba(192,132,252,0.25)) !important;
+  color: #c084fc !important;
+  border: 1px solid rgba(192,132,252,0.3) !important;
+}
+
+.highlight-card .formula-box {
+  border-left-color: #c084fc;
+}
+
+.highlight-card .formula-display {
+  color: #ddd6fe;
+}
+
 /* ─── Print styles ─── */
 @media print {
   .navbar, .hero-bg, .hero-visual, .theme-toggle, .solution-btn { display: none; }
